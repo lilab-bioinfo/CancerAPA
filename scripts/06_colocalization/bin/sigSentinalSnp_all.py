@@ -31,8 +31,7 @@ for each_trait in file_trait:
 			file2=open(file_sentinal,"r")
 			f2=file2.readlines()
 			file2.close()
-			#rangeSig=1e5
-			rangeSig=1e6 #by HYM
+			rangeSig=1e5
 			for line in f2:
 				line_split=line.split('\t')
 				if line_split[1].isdigit():
