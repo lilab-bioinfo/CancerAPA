@@ -3,7 +3,7 @@ Resources and analysis shared by ["A distinct class of pan-cancer susceptibility
 # Introduction
 In this study, we performed the first large-scale and systematic analysis assessing the genetic effects of APA on 25 cancer types in 49 human tissues from the Genotype-Tissue Expression(GTEx).
 # Outline
-* GWAS fine-mapping using [CAUSALdb](https://github.com/mulinlab/CAUSALdb-finemapping-pip)
+* GWAS clump using [plink](https://www.cog-genomics.org/plink/) and fine-mapping using [CAUSALdb](https://github.com/mulinlab/CAUSALdb-finemapping-pip)
 * GWAS heritabiltiy estimates and genetic correlaiton using [LDSC](https://github.com/bulik/ldsc)
 * 3aQTL calling and fine-mapping using [CAVIAR](https://github.com/fhormoz/caviar)
 * GWAS and 3aQTL integration
