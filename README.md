@@ -7,10 +7,10 @@ In this study, we performed the first large-scale and systematic analysis assess
 * GWAS heritabiltiy estimates and genetic correlaiton using [LDSC](https://github.com/bulik/ldsc)
 * 3aQTL calling and fine-mapping using [CAVIAR](https://github.com/fhormoz/caviar)
 * GWAS and 3aQTL integration
-  * heritablity enrichment esitimate using 
-  * coloc(https://github.com/chr1swallace/coloc)
-  * SMR
-  * TWAS
+  * heritablity enrichment esitimate using [LDSC](https://github.com/bulik/ldsc) and [fgwas]([https://github.com/bulik/ldsc](https://github.com/joepickrell/fgwas)
+  * [coloc](https://github.com/chr1swallace/coloc)
+  * Transcriptome-wide association analysis using [FUSION](http://gusevlab.org/projects/fusion/)
+  * 
 
 ## Prerequisites
 1. `Python (version >= v2.7.14)`
@@ -18,7 +18,3 @@ In this study, we performed the first large-scale and systematic analysis assess
 3. `PEER (v1.3), https://github.com/PMBio/peer`
 4. `PEER (v1.3), https://github.com/PMBio/peer`
 5.
-
-```
-
-```
