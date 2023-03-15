@@ -11,9 +11,20 @@ In this study, we performed the first large-scale and systematic analysis assess
   * Transcriptome-wide association analysis using [FUSION](http://gusevlab.org/projects/fusion/)
   
 ## Prerequisites
-1. `Python (version >= v2.7.14)`
-2. `R (v3.6.2)`
-3. `PEER (v1.3), https://github.com/PMBio/peer`
-4. `bedtools (v2.25.0-119-ga0dc5db)`
-5. `samtools (v1.9)`
-6. `plink 1.9 beta`
+1.Download and install python3
+```
+wget -c https://repo.anaconda.com/archive/Anaconda3-5.3.0-Linux-x86_64.sh
+bash Anaconda3-5.3.0-Linux-x86_64.sh
+```
+2.Download and install other neccessary tools with conda
+```
+conda install -c r r-base
+conda install -c conda-forge r-dplyr
+conda install -c bioconda r-peer
+conda install -c bioconda Bioconductor-impute
+conda install -c bioconda matrixeqtl
+conda install -c bioconda bedtools
+conda install -c bioconda vcftools
+conda install -c bioconda samtools
+conda install -c bioconda plink=1.90
+```
