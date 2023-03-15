@@ -10,8 +10,7 @@ import os
 file_results=os.getcwd()+"/../output/results_transcript"
 trait_file=os.listdir(file_results)
 file_trait=sorted(trait_file)
-#file_sentinalSNP=os.getcwd()+"/../output/sentinalSNP"
-file_sentinalSNP="/lustre/home/hchen/2021-10-31-cancer-GWAS/coloc_analysis/output/sentinelSNP"
+file_sentinalSNP=os.getcwd()+"/../output/sentinalSNP"
 path_output=file_results+"/../analysis/allTissueProportion_SigSentinalSnp_range1e6_hyp4_0.75.txt"
 file_output=open(path_output,"w+")
 
@@ -22,8 +21,7 @@ for each_trait in file_trait:
 	trait_folder=os.listdir(path_tissue)
 	for each_trait_tissue in trait_folder:
 		tissueName='_'.join(each_trait_tissue.split('_')[:-1])
-		#file_sentinal=file_sentinalSNP+"/"+each_trait+"/sentinalSNP.txt"
-		file_sentinal=file_sentinalSNP+"/"+each_trait+"/sentinalSNP_maf0.01.txt"
+		file_sentinal=file_sentinalSNP+"/"+each_trait+"/sentinalSNP.txt"
 		if not os.path.exists(file_sentinal):
 			continue
 		trait=each_trait_tissue.split('_')[-1]
@@ -43,7 +41,7 @@ for each_trait in file_trait:
 					bottom=int(sentinalSnpTSS)-rangeSig
 					top=int(sentinalSnpTSS)+rangeSig
 					flag=0
-					snp=line_split[3][1:-1]#by HYM
+					snp=line_split[3][1:-1]
 					sentinalSnp=[bottom,top,flag,snpChr,snp]
 					print(sentinalSnp)
 					locals()[trait].append(sentinalSnp)
@@ -117,7 +115,7 @@ for trait in traits:
 			colocsnp.append(eachTrait[4])
 	#print locals()[trait]
 	#proportionSigSentinalSnp = sigSentinalSnpNum/totalSentinalSnp
-	file_output.write(trait+"\t"+str(sigSentinalSnpNum)+"\t"+str(totalSentinalSnp)+"\t"+','.join(colocsnp)+"\n") #by HYM
+	file_output.write(trait+"\t"+str(sigSentinalSnpNum)+"\t"+str(totalSentinalSnp)+"\t"+','.join(colocsnp)+"\n") 
 
 
 file_output.close()
