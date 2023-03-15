@@ -5,7 +5,6 @@ names = gsub(".wgt.RDat","",basename(lst))
 N = length(lst)
 
 models = c("top1","blup","enet","bslmm","lasso")
-#models= c("top1","enet","lasso")
 colnames = c( "id" , "nsnps" , "hsq" , "hsq.se" , "hsq.pv" , paste(models,"r2",sep='.') , paste(models,"pv",sep='.') )
 
 mat.snps = matrix(nrow=N,ncol=1)
