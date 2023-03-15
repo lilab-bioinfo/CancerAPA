@@ -8,10 +8,8 @@ In this study, we performed the first large-scale and systematic analysis assess
 * 3aQTL calling and fine-mapping using [CAVIAR](https://github.com/fhormoz/caviar)
 * Integreation of cancer GWAS and 3aQTLs to assess the 3aQTL for their contributions to disease susceptibility
   * Partitioned heritabiltiy estimates using [LDSC](https://github.com/bulik/ldsc) and heritablity enrichment esitimates using [fgwas](https://github.com/joepickrell/fgwas)
-  * Colocalization approach that seek to establish shared causal variants using [coloc](https://github.com/chr1swallace/coloc)
   * Transcriptome-wide association analysis using [FUSION](http://gusevlab.org/projects/fusion/)
-  * Addendum: mediation methods [SMR](https://yanglab.westlake.edu.cn/software/smr/#SMR&HEIDIanalysis)
-
+  
 ## Prerequisites
 1. `Python (version >= v2.7.14)`
 2. `R (v3.6.2)`
