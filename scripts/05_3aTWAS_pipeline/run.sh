@@ -146,8 +146,47 @@ for(( t=0; t<49; t++)){ makeProfile "${tissALL[$t]}" &}
 
 run_3aTWAS_analysis(){
 
+for file in  `ls $WORK_DIR/GWAS/*.sumstats`
+      do
+      GWAS=`echo $file|awk -F "/" '{print $NF}' |awk -F "_result" '{print $1}'`
+      for tissueName in `less $WORK_DIR/bin/tissue.list`
+           do
+           mkdir -p $WORK_DIR/results/${GWAS}/${tissueName}
+           echo '#!/bin/bash
+#SBATCH --job-name=\'3aTWAS_'${GWAS}'\'
+#SBATCH --partition=cpuPartition
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=8
+#SBATCH --error=%j.err
+#SBATCH --output=%j.out
+      
+##################################
 
-
+module load R/3.6.2-anaconda3
+for chr  in `less $WORK_DIR/WEIGHTS/'${tissueName}'.pos|awk -F "\\\t" '"'"'NR>1{print $3}'"'"'|sort -u`
+                        do
+                        outfile="$WORK_DIR/results/'${GWAS}'/'${tissueName}'/'${GWAS}'.'${tissueName}'.chr${chr}.dat"
+                if [ -f ${outfile} ];then
+                        echo "'${GWAS}'_"'${tissueName}'"_chr"${chr}" have done!"
+                        continue
+                else
+                Rscript /lustre/home/hchen/2021-10-31-cancer-GWAS/aTWAS/fusion/bin/fusion_twas-master/FUSION.assoc_test.R \
+                --sumstats '${file}' \
+                --weights /lustre/home/hchen/2021-10-31-cancer-GWAS/aTWAS/fusion/2022-02-17-build-weight/output_FDR0.05_new/WEIGHTS/'${tissueName}'.pos  \
+                --weights_dir /lustre/home/hchen/2021-10-31-cancer-GWAS/aTWAS/fusion/2022-02-17-build-weight/output_FDR0.05_new/WEIGHTS/ \
+                --ref_ld_chr /lustre/home/hchen/2021-10-31-cancer-GWAS/aTWAS/fusion/bin/fusion_twas-master/LDREF/1000G.EUR. \
+                --chr ${chr} \
+                --out /lustre/home/hchen/2021-10-31-cancer-GWAS/aTWAS/fusion/results_new/'${GWAS}'/'${tissueName}'/'${GWAS}'.'${tissueName}'.chr${chr}.dat 
+                
+                fi
+               
+                done' > $WORK_DIR/slurm/${GWAS}/${GWAS}_${tissueName}_run_aTWAS.sh
+                
+                mkdir -p $WORK_DIR/slurm/${GWAS}/log
+                cd $WORK_DIR/slurm/${GWAS}/log
+                sbatch $WORK_DIR/slurm/${GWAS}/${GWAS}_${tissueName}_run_aTWAS.sh
+                done
+      done
 
 
 }
