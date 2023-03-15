@@ -2,8 +2,6 @@
 #python3 /media/disk3/CancerGWAS/CAUSALdb/run_fine_mapping.py -p /media/disk3/CancerGWAS/CAUSALdb/fine_mapping_input.txt >run_fine_mapping.log 2>run_fine_mapping.err &
 
 #path	 -s	 -p
-#GLGC_CG0242_result.txt	5222	EUR#Author : Yueming Hu
-#TIME:2020/12/17
 
 import argparse
 import os
@@ -17,7 +15,7 @@ def print_run(cmd):
 	print("")
 	os.system(cmd)
 def AllFilePath(pathfilename):
-	#root = os.getcwd() #获取当前工作目录路径
+	#root = os.getcwd() 
 	file_names = open(pathfilename)
 	file_ob_list = {}
 	for file_name in file_names:
