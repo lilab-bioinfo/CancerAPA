@@ -18,7 +18,7 @@ def print_run(cmd):
 	print("")
 	os.system(cmd)
 def AllFilePath(pathfilename):
-	#root = os.getcwd() #获取当前工作目录路径
+	#root = os.getcwd() 
 	file_names = open(pathfilename)
 	file_ob_list = {}
 	for file_name in file_names:
