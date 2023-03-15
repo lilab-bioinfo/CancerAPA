@@ -8,6 +8,7 @@ In this study, we performed the first large-scale and systematic analysis assess
 * APA quantification using [DaPars2](https://github.com/3UTR/DaPars2), aQTL calling using [MatrixEQTL](https://github.com/andreyshabalin/MatrixEQTL) and fine-mapping on 3aQTL using [CAVIAR](https://github.com/fhormoz/caviar)
 * Integreation of cancer GWAS and 3aQTLs to assess the 3aQTL for their contributions to disease susceptibility
   * Partitioned heritabiltiy estimates using [LDSC](https://github.com/bulik/ldsc) and heritablity enrichment esitimates using [fgwas](https://github.com/joepickrell/fgwas)
+  * Colocalization approaches that seek to establish shared causal variants using [coloc](https://github.com/chr1swallace/coloc)
   * Transcriptome-wide association analysis using [FUSION](http://gusevlab.org/projects/fusion/)
   
 ## Prerequisites
