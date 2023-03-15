@@ -5,7 +5,7 @@ In this study, we performed the first large-scale and systematic analysis assess
 # Outline
 * GWAS clump using [plink](https://www.cog-genomics.org/plink/) and fine-mapping using [CAUSALdb](https://github.com/mulinlab/CAUSALdb-finemapping-pip)
 * GWAS heritabiltiy estimates and genetic correlaiton using [LDSC](https://github.com/bulik/ldsc)
-* 3aQTL calling and fine-mapping using [CAVIAR](https://github.com/fhormoz/caviar)
+* APA quantification using [DaPars2](https://github.com/3UTR/DaPars2),aQTL calling using [matrixEQTL](https://github.com/andreyshabalin/MatrixEQTL)and fine-mapping on 3aQTL using [CAVIAR](https://github.com/fhormoz/caviar)
 * Integreation of cancer GWAS and 3aQTLs to assess the 3aQTL for their contributions to disease susceptibility
   * Partitioned heritabiltiy estimates using [LDSC](https://github.com/bulik/ldsc) and heritablity enrichment esitimates using [fgwas](https://github.com/joepickrell/fgwas)
   * Transcriptome-wide association analysis using [FUSION](http://gusevlab.org/projects/fusion/)
