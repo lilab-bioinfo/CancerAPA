@@ -14,16 +14,16 @@ file_results_tissue=os.listdir(file_results)
 file_results_trait=os.listdir(file_GWASs)
 
 file_results_trait=sorted(file_results_trait)
-#print(file_results_trait)
+
 path_output=file_results+"/../analysis/All_colocalizedGene_3aQTLs.txt"
-#path_eQTLs="/mount/weili4/zhec/coloc/2018-06-26-23processed_eQTLs/output/analysis/colocalizedGene_eQTLs.txt"
+
 file_output=open(path_output,"w+")
 file_output.write("GeneName"+"\t"+"SNP_Num"+"\t"+"HyPP0"+"\t"+"Hypp1"+"\t"+"Hypp2"+"\t"+"Hypp3"+"\t"+"Hypp4"+"\t"+"Tissue"+"\t"+"Trait"+"\n")
-#file_eQTLs=open(path_eQTLs,"r")
+
 
 traitStart=1
-traitFinished=101
-#Analyze traits from 1 to 105
+traitFinished=80
+#Analyze traits 
 for i in range(traitStart-1,traitFinished):
 	trait=file_results_trait[i]
 	print(trait)
