@@ -192,10 +192,47 @@ for chr  in `less $WORK_DIR/WEIGHTS/'${tissueName}'.pos|awk -F "\\\t" '"'"'NR>1{
 }
 
 contidional_analysis(){
+###### filter the top results ###########
+for tissueName in `less $WORK_DIR/bin/tissue.list`
+    do
+    num_weights=`less $WORK_DIR/WEIGHTS/"${tissueName}".list|wc -l`
+    cd $WORK_DIR/results
+    for GWAS in `ls $WORK_DIR/results/`
+        do
+        ls $WORK_DIR/results/${GWAS}/${tissueName}/*.dat|while read line;do cat $line |awk 'NR==1 || $NF <0.05/'${num_weights}'' >  `echo ${line}|awk -F ".dat" '{print $1}'`.top;done
+    done
+done
+
+########## post_process #############
+echo '#!/bin/bash
+#SBATCH --job-name=\'post_process\'
+#SBATCH --partition=cpuPartition
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=8
+#SBATCH --error=%j.err
+#SBATCH --output=%j.out
+      
+##################################
+
+module load R/3.6.2-anaconda3
+for file in `ls /lustre/home/hchen/2021-10-31-cancer-GWAS/aTWAS/fusion/GWASs/*.sumstats`
+    do
+    GWAS=`echo $file|`
+        for CHR in `less $OUTPUT_DIR/WEIGHTS/${tissueName}.pos|awk -F "\\t" "'NR>1{print $3}'|sort -u`
+        do
+        Rscript $fusion/bin/fusion_twas-master/FUSION.post_process.R --sumstats ${file} \
+        --input $WORK_DIR/resulsts/${GWAS}/${tissueName}/${GWAS}.${tissueName}.chr${CHR}.top \
+        --out /lustre/home/hchen/2021-10-31-cancer-GWAS/aTWAS/fusion/results/${GWAS}/${tissueName}/${GWAS}.${tissueName}.chr${CHR}.top.analysis \
+        --ref_ld_chr $fusion/bin/fusion_twas-master/LDREF/1000G.EUR \
+        --chr $CHR \
+        --plot
+        --locus_win 100000    
+        done
+done
 
 
-
-
+' > $WORK_DIR/slurm/post_process.sh
+    sbatch $WORK_DIR/slurm/post_process.sh
 }
 
 
