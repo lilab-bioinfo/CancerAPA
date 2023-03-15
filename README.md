@@ -16,3 +16,4 @@ In this study, we performed the first large-scale and systematic analysis assess
 3. `PEER (v1.3), https://github.com/PMBio/peer`
 4. `bedtools (v2.25.0-119-ga0dc5db)`
 5. `samtools (v1.9)`
+6. `plink 1.9 beta`
