@@ -5,7 +5,7 @@ main(){
 }
 
 global_parameters(){
-    CUR_DIR="/lustre/home/hchen/cancer-GWAS"
+    CUR_DIR=`pwd`
 
 }
 
