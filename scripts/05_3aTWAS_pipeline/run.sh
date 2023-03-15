@@ -161,7 +161,7 @@ for file in  `ls $WORK_DIR/GWAS/*.sumstats`
 ##################################
 
 module load R/3.6.2-anaconda3
-for chr  in `less $WORK_DIR/WEIGHTS/'${tissueName}'.pos|awk -F "\\\t" '"'"'NR>1{print $3}'"'"'|sort -u`
+for chr  in `less $WORK_DIR/WEIGHTS/'${tissueName}'.pos|awk \'NR>1{print $3}\'|sort -u`
                         do
                         outfile="$WORK_DIR/results/'${GWAS}'/'${tissueName}'/'${GWAS}'.'${tissueName}'.chr${chr}.dat"
                 if [ -f ${outfile} ];then
@@ -215,8 +215,8 @@ echo '#!/bin/bash
 module load R/3.6.2-anaconda3
 for file in `ls $WORK_DIR/GWASs/*.sumstats`
     do
-    GWAS=`echo $file|`
-        for CHR in `less $OUTPUT_DIR/WEIGHTS/${tissueName}.pos|awk -F "\\t" "'NR>1{print $3}'|sort -u`
+    GWAS=`echo $file|basename |awk -F "_result" '{print $1}'`
+        for CHR in `less $OUTPUT_DIR/WEIGHTS/${tissueName}.pos|awk \'NR>1{print $3}\'|sort -u`
         do
         Rscript $fusion/bin/fusion_twas-master/FUSION.post_process.R --sumstats ${file} \
         --input $WORK_DIR/resulsts/${GWAS}/${tissueName}/${GWAS}.${tissueName}.chr${CHR}.top \
