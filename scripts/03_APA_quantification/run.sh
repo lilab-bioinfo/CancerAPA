@@ -93,9 +93,9 @@ do
 #SBATCH --cpus-per-task=3
 module load R/3.6.2
 module load bedtools2/2.29.2
-~/anaconda2/bin/python ~/GTEx/bin/DaPars2_for_tumor_alone_without_extension.py mapping_joint_Analysis_DaPars_each_chr_configure.txt ${files[$i]}" > ${filename}_dapars.sh
+~/anaconda2/bin/python ~/GTEx/src/DaPars2_Multi_Sample_Multi_Chr.py mapping_joint_Analysis_DaPars_each_chr_configure.txt ${files[$i]}" > ${filename}_dapars.sh
 wait
-#sbatch ${filename}_dapars.sh
+sbatch ${filename}_dapars.sh
 wait
 done
 
@@ -118,7 +118,7 @@ run_peer(){
 #SBATCH --nodes=4
 #SBATCH --cpus-per-task=4
 module load R/4.0.2
-Rscript bin/3UTR_QTL_peer.R ${tissue}" > ${tissue}_peer.sh
+Rscript src/3UTR_QTL_peer.R ${tissue}" > ${tissue}_peer.sh
 wait
 sbatch ${tissue}_peer.sh
 wait
