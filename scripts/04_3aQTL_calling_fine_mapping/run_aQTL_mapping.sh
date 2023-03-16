@@ -4,10 +4,6 @@ main(){
 	#run_filterVCF
 	#run_pastefilterVCF
 	#run_filterVCF2value
-	#link_all_pdui
-	#get_id_file
-	#filter_vcftools
-	#vcf_to_snpmatrix
 	#run_peer
 	run_matrixeqtl
 	#boxplot_3aQTL
