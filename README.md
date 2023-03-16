@@ -137,29 +137,29 @@ We highly recommend using conda to setup and manage the software environment. Th
 Each analysis has a demo input data under the Scripts/ folder.
 
 ## Instructions for use
-1. Definition of lead SNPs and trait-assocaited loci using `plink` clumping:
+**1. Definition of lead SNPs and trait-assocaited loci using `plink` clumping:**
 ```
 > bash run_plink_clump.sh
 ```
 
-2. Fine mapping of trait-associated loci to defined credible SNPs:
+**2. Fine mapping of trait-associated loci to defined credible SNPs:**
 
 ```
 > bash run_finemapping.sh
 ```
 
-3. Estimate SNP heritability and genetic correlation:
+**3. Estimate SNP heritability and genetic correlation:**
 
 ```
 > bash run_ldsc_heritability.sh
 > bash run_ldsc_genetic_correlation.sh
 ```
 
-4. APA quantification and 3'aQTL mapping:
+**4. APA quantification and 3'aQTL mapping:**
 
-We have developed a pipeline to analyze APA and call 3'aQTL before. Please refer to our [3aQTL-pipe](https://github.com/3UTR/3aQTL-pipe) for detailed instructions.
+  We have developed a pipeline to analyze APA and call 3'aQTL before. Please refer to our [3aQTL-pipe](https://github.com/3UTR/3aQTL-pipe) for detailed instructions.
 
-5. Enrichment of 3'aQTL in cancer GWAS signals
+**5. Enrichment of 3'aQTL in cancer GWAS signals**
     * Partitioned heritabilty of 3'aQTL for the cancer traits' heritability using `LDSC`:
     
     ```
@@ -172,13 +172,13 @@ We have developed a pipeline to analyze APA and call 3'aQTL before. Please refer
     > bash run-fgwas-cancer.sh  
     ```
   
-6. Colocalization of trait-associated loci and 3'aQTL
+**6. Colocalization of trait-associated loci and 3'aQTL:**
 
 ```
 > bash run_aQTL_colocalization.sh
 ```
 
-7. Build 3'TWAS model and run transcriptome-wide association analysis:
+**7. Build 3'TWAS model and run transcriptome-wide association analysis:**
 
     * Compute GTEx v8 APA predictive models:
     ```
