@@ -44,15 +44,16 @@ External software
 * `fgwas(0.3.6)`
 * `GCTA (1.93.3beta2)`
 * `GEMMA (0.98.5)`
+* `FUSION`
 
 ## Installation guide (Time required: 30 min)
 We highly recommend using conda to setup and manage the software environment. The instructions below introduce how to setup the running environment with conda.
 
-1. Install python and conda. Download installer script “Anaconda2-2019.10-Linux-x86_64.sh” from [Anaconda Repository](https://repo.anaconda.com/archive/). Python and conda will be installed in $HOME/anaconda2/bin by default.
+* Install python and conda. Download installer script “Anaconda2-2019.10-Linux-x86_64.sh” from [Anaconda Repository](https://repo.anaconda.com/archive/). Python and conda will be installed in $HOME/anaconda2/bin by default.
 ```
 > bash Anaconda2-2019.10-Linux-x86_64.sh
 ```
-2. Install other software and dependencies with conda
+* Install other software and dependencies with conda
 ```
 > conda install -c conda-forge r-base
 > conda install -c conda-forge r-dplyr
@@ -65,6 +66,26 @@ We highly recommend using conda to setup and manage the software environment. Th
 > conda install -c bioconda samtools
 > conda install -c bioconda vcftools
 > conda install -c bioconda tabix
+```
+* Install CASUALdb
+```
+# Clone the repo:
+> git clone https://github.com/mulinlab/CAUSALdb-finemapping-pip.git
+
+# set up conda environment and download fine-mapping tools:
+> cd bin
+> bash 00_set_up.sh
+> cd ..
+
+# build reference panel:
+> cd ref
+> python 01_prepare_reference.py
+> cd ..
+```
+* Install FUSION software package from github:
+```
+> wget -c  https://github.com/gusevlab/fusion_twas/archive/master.zip
+
 ```
 ## Demo data for running the codes
 
