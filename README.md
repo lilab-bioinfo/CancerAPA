@@ -205,13 +205,12 @@ We have developed a pipeline to analyze APA and call 3'aQTL before. Please refer
         
         ```
         Rscript FUSION.assoc_test.R \
-        --sumstats
-        --weights
+        --sumstats $WORK_DIR/GWAS/*.sumstats
+        --weights $WORK_DIR/output/WEIGHTS/'${tissueName}'.pos \
         --weights_dir ./WEIGHTS/ \
         --ref_ld_chr ./LDREF/1000G.EUR. \
         --chr ${chr} \
-        --out .dat
-        
+        --out $WORK_DIR/results/'${GWAS}'/'${tissueName}'/'${GWAS}'.'${tissueName}'.chr${chr}.dat 
         ```
 
 ## Authors
