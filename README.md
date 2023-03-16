@@ -160,17 +160,10 @@ Each analysis has a demo input data under the Scripts/ folder.
   We have developed a pipeline to analyze APA and call 3'aQTL before. Please refer to our [3aQTL-pipe](https://github.com/3UTR/3aQTL-pipe) for detailed instructions.
 
 **5. Enrichment of 3'aQTL in cancer GWAS signals**
-    * Partitioned heritabilty of 3'aQTL for the cancer traits' heritability using `LDSC`:
-    
-    ```
-    > bash LDSC-Partitioned-Heritability.sh
-    ```
-    
-    * Enrichment estimation of 3'aQTL in cancer GWAS signals using `fgwas`:
-    
-    ```
-    > bash run-fgwas-cancer.sh  
-    ```
+```
+> bash LDSC-Partitioned-Heritability.sh
+> bash run-fgwas-cancer.sh  
+```
   
 **6. Colocalization of trait-associated loci and 3'aQTL:**
 
@@ -180,7 +173,7 @@ Each analysis has a demo input data under the Scripts/ folder.
 
 **7. Build 3'TWAS model and run transcriptome-wide association analysis:**
 
-    * Compute GTEx v8 APA predictive models:
+* Compute GTEx v8 APA predictive models:
     ```
     Rscript FUSION_compute_weights.R \
     --bfile ${tissName}.${GNAME} \
@@ -194,20 +187,20 @@ Each analysis has a demo input data under the Scripts/ folder.
     --hsq_p 0.05 \
     ```
     
-    * APA-based transcriptome wide association analysis
-      - Input: GWAS summary statistics
+* APA-based transcriptome wide association analysis
+  - Input: GWAS summary statistics
         
-        The input of GWAS summary statistics is in LD-score format, which mainly contain the following columns:
-          1. `SNP` : SNP identifier(rsID)
-          2. `A1` : first allele (effect allele)
-          3. `A2` : second allel (other allele)
-          4. `Z` : Z-score,sign with respect to `A1`
+    The input of GWAS summary statistics is in LD-score format, which mainly contain the following columns:
+    1. `SNP` : SNP identifier(rsID)
+    2. `A1` : first allele (effect allele)
+    3. `A2` : second allel (other allele)
+    4. `Z` : Z-score,sign with respect to `A1`
 
-      - Input: APA weights
+  - Input: APA weights
           
-          The reference data are loaded using the `./WEIGHTS/${tissueName}.pos` which points to the individual `*RDat` weights files, their gene identifiers, physical positions. Only weights in the file will be evaluated.
+    The reference data are loaded using the `./WEIGHTS/${tissueName}.pos` which points to the individual `*RDat` weights files, their gene identifiers, physical positions. Only weights in the file will be evaluated.
       
-      - Performing the APA level-disease association
+   - Performing the APA level-disease association
         
         ```
         Rscript FUSION.assoc_test.R \
