@@ -1,0 +1,6 @@
+Population	Class	System	CGID	Trait	Source	Download	Case	Control	Sample size (~n)
+EUR	Breast	reproductive system	CG0056	Breast cancer	NCBI	http://bcac.ccge.medschl.cam.ac.uk/files/icogs_onco_gwas_meta_overall_breast_cancer_summary_level_statistics.txt.zip	133,384	113,789	247173
+EUR	Prostate	reproductive system,urinary system	CG0276	Prostate cancer	GWAS Catalog	ftp://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/SchumacherFR_29892016_GCST006085	79,148	61,106	140254
+EUR	Breast	reproductive system	CG0052	Breast cancer	GWAS Catalog	ftp://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/MichailidouK_29059683_GCST004988	76,192	63,082	139274
+EUR	Breast	reproductive system	CG0050	Breast cancer	GWAS Catalog	ftp://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/MichailidouK_25751625_GCST007236	46,785	42,892	89677
+EUR	Ovarian	reproductive system	CG0258	Invasive epithelial ovarian cancer	GWAS Catalog	ftp://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/PhelanCM_28346442_GCST004415	22,406	40,941	63347
