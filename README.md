@@ -178,7 +178,7 @@ We have developed a pipeline to analyze APA and call 3'aQTL before. Please refer
 > bash run_aQTL_colocalization.sh
 ```
 
-7. Build 3'TWAS model and run association analysis
+7. Build 3'TWAS model and run transcriptome-wide association analysis:
 
     * Compute GTEx v8 APA predictive models:
     ```
