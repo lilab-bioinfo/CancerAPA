@@ -29,11 +29,11 @@ Python and dependent packages
 
 External software
 * `tabix (v1.7)
-* `bedtools (v2.30.0)`
-* `samtools (v1.10)`
+* `bedtools (>= v2.30.0)`
+* `samtools (>= v1.10)`
 * `plink 1.9 beta`
 
-## Installation guide
+## Installation guide (Time required: 30 min)
 We highly recommend using conda to setup and manage the software environment. The instructions below introduce how to setup the running environment with conda.
 
 1. Install python and conda. Download installer script “Anaconda2-2019.10-Linux-x86_64.sh” from [Anaconda Repository](https://repo.anaconda.com/archive/). Python and conda will be installed in $HOME/anaconda2/bin by default.
@@ -52,28 +52,38 @@ We highly recommend using conda to setup and manage the software environment. Th
 > conda install -c bioconda plink=1.90
 > conda install -c bioconda samtools
 > conda install -c bioconda vcftools
+> conda install -c bioconda tabix
+```
+## Demo data for running the codes
+
+## Instructions for use
+
+
+1.GWAS clump and fine-mapping
+```
+> bash gwas_clump.sh
+> bash gwas_finemap.sh
 ```
 
-## Outline of the analyses
+2.Estimate heritability and genetic correlation
+```
+> bash gwas_heritability.sh
+> bash gwas_genetic_cor_ldsc.sh
+```
 
-### 1.GWAS clump and fine-mapping
-* GWAS clump using [plink](https://www.cog-genomics.org/plink/) and fine-mapping using [CAUSALdb](https://github.com/mulinlab/CAUSALdb-finemapping-pip)
+3. APA quantification and 3'aQTL mapping
+We have developed a pipeline to analyze APA and call 3'aQTL before. Please refer to our [3aQTL-pipe]() for detailed instructions.
 
-### 2.Estimate heritability and genetic correlation
-* GWAS heritabiltiy estimates and genetic correlaiton using [LDSC](https://github.com/bulik/ldsc)
+4. Enrichment of 3'aQTL in cancer GWAS signals
+```
+bash enrich_aQTL_in_GWAS.sh
+```
 
-### 3. APA quantification
-* APA quantification using [DarPars2]()
-
-### 4. 3'aQTL mapping
-* 3aQTL calling and fine-mapping using [CAVIAR](https://github.com/fhormoz/caviar)
-
-### Analysis of 3'aQTL enrichment in cancer GWAS signals
-* Integreation of cancer GWAS and 3aQTLs to assess the 3aQTL for their contributions to disease susceptibility
-  * Partitioned heritabiltiy estimates using [LDSC](https://github.com/bulik/ldsc) and heritablity enrichment esitimates using [fgwas](https://github.com/joepickrell/fgwas)
   
-### Build and run 3aTWAS model
-  * Transcriptome-wide association analysis using [FUSION](http://gusevlab.org/projects/fusion/)
+5. Build and run 3aTWAS model
+```
+
+```
   
 
 
