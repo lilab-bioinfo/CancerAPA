@@ -60,13 +60,13 @@ We highly recommend using conda to setup and manage the software environment. Th
 ## Instructions for use
 
 
-1.GWAS clump and fine-mapping
+1. GWAS clump and fine-mapping
 ```
 > bash gwas_clump.sh
 > bash gwas_finemap.sh
 ```
 
-2.Estimate heritability and genetic correlation
+2. Estimate heritability and genetic correlation
 ```
 > bash gwas_heritability.sh
 > bash gwas_genetic_cor_ldsc.sh
