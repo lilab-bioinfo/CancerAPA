@@ -140,7 +140,6 @@ We highly recommend using conda to setup and manage the software environment. Th
 
 3. Estimate SNP heritability and genetic correlation:
 ```
-
 > bash gwas_heritability.sh
 > bash gwas_genetic_cor_ldsc.sh
 ```
@@ -148,17 +147,21 @@ We highly recommend using conda to setup and manage the software environment. Th
 4. APA quantification and 3'aQTL mapping:
 We have developed a pipeline to analyze APA and call 3'aQTL before. Please refer to our [3aQTL-pipe](https://github.com/3UTR/3aQTL-pipe) for detailed instructions.
 
-5. fgwas_estimate_Enrichment of 3'aQTL in cancer GWAS signals
-  * Partitioned heritabilty of 3'aQTL for the cancer traits' heritability using `LDSC`:
-  ```
-  > bash LDSC-Partitioned-Heritability.sh
-  ```
-  * Enrichment of 3'aQTL in cancer GWAS signals using `fgwas`:
-  ```
-  > bash run-fgwas-cancer.sh  
-  ```
+5. Enrichment of 3'aQTL in cancer GWAS signals
+    * Partitioned heritabilty of 3'aQTL for the cancer traits' heritability using `LDSC`:
+    ```
+    > bash LDSC-Partitioned-Heritability.sh
+    ```
+    * Enrichment estimation of 3'aQTL in cancer GWAS signals using `fgwas`:
+    ```
+    > bash run-fgwas-cancer.sh  
+    ```
   
 6. Colocalization of trait-associated loci and 3'aQTL
+
+```
+> bash run_aQTL_colocalization.sh
+```
 
 7. Build and run 3'TWAS model
 ```
