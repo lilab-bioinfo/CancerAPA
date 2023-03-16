@@ -136,14 +136,16 @@ Each analysis has a demo input data under the folder.
 ```
 
 2. Fine mmapping of trait-associated loci to defined credible SNPs:
+
 ```
 > bash run_finemapping.sh
 ```
 
 3. Estimate SNP heritability and genetic correlation:
+
 ```
-> bash gwas_heritability.sh
-> bash gwas_genetic_cor_ldsc.sh
+> bash run_ldsc_heritability.sh
+> bash run_ldsc_genetic_correlation.sh
 ```
 
 4. APA quantification and 3'aQTL mapping:
@@ -151,10 +153,13 @@ We have developed a pipeline to analyze APA and call 3'aQTL before. Please refer
 
 5. Enrichment of 3'aQTL in cancer GWAS signals
     * Partitioned heritabilty of 3'aQTL for the cancer traits' heritability using `LDSC`:
+    
     ```
     > bash LDSC-Partitioned-Heritability.sh
     ```
+    
     * Enrichment estimation of 3'aQTL in cancer GWAS signals using `fgwas`:
+    
     ```
     > bash run-fgwas-cancer.sh  
     ```
@@ -166,6 +171,7 @@ We have developed a pipeline to analyze APA and call 3'aQTL before. Please refer
 ```
 
 7. Build and run 3'TWAS model
+
 ```
 > bash aTWAS_Model_fusion.sh
 ```
