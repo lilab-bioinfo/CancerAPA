@@ -35,6 +35,7 @@ Python and dependent packages
 External software
 * `LDSC (v1.0.1)`
 * `plink 1.9 beta`
+* `CAUSALdb`
 * `tabix (v1.7)`
 * `bedtools (>= v2.30.0)`
 * `samtools (>= v1.10)`
