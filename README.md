@@ -105,24 +105,16 @@ Lei Li (Institute of Systems and Physical Biology, Shenzhen Bay Laboratory)
 
 ## Citation
 
-* Hui Chen^, Zeyang Wang^, Jia Wang^, Wenyan Chen, Xuelian Ma, Xudong Zou, Mireya Plass, Cheng Lian, Ting Ni, Gong-Hong Wei, Wei Li#, Lin Deng#, Lei Li# (2023)
-A distinct class of pan-cancer susceptibility genes revealed by alternative polyadenylation transcriptome-wide association study medrxiv 10.1101/2023.02.28.23286554
+* Hui Chen^, Zeyang Wang^, Jia Wang^, Wenyan Chen, Xuelian Ma, Xudong Zou, Mireya Plass, Cheng Lian, Ting Ni, Gong-Hong Wei, Wei Li#, Lin Deng#, Lei Li# 
+**A distinct class of pan-cancer susceptibility genes revealed by alternative polyadenylation transcriptome-wide association study** **(2023)** medrxiv 10.1101/2023.02.28.23286554
 
-* Code and Execution:
 
-**Using population-scale transcriptomic and genomic data to map 3' UTR alternative polyadenylation quantitative trait loci**
-
-Xudong Zou, Ruofan Ding, Wenyan Chen, Gao Wang, Shumin Cheng, Qin Wang, Wei Li, Lei Li. ***STAR Protocols***,3(3):101566 **(2022)**.
+* Xudong Zou, Ruofan Ding, Wenyan Chen, Gao Wang, Shumin Cheng, Qin Wang, Wei Li, Lei Li. **Using population-scale transcriptomic and genomic data to map 3' UTR alternative polyadenylation quantitative trait loci** ***STAR Protocols***,3(3):101566 **(2022)**.
 DOI: https://doi.org/10.1016/j.xpro.2022.101566
-https://www.sciencedirect.com/science/article/pii/S2666166722004464?via%3Dihub
 
-* The first 3'aQTL atlas of human tissues:
 
-**An atlas of alternative polyadenylation quantitative trait loci contributing to complex trait and disease heritability**
+* Lei Li, Kai-Lieh Huang, Yipeng Gao, Ya Cui, Gao Wang, Nathan D. Elrod, Yumei Li, Yiling Elaine Chen, Ping Ji, Fanglue Peng, William K. Russell, Eric J. Wagner & Wei Li.**An atlas of alternative polyadenylation quantitative trait loci contributing to complex trait and disease heritability** ***Nature Genetics***,53,994-1005 **(2021)**. DOI:https://doi.org/10.1038/s41588-021-00864-5
 
-Lei Li, Kai-Lieh Huang, Yipeng Gao, Ya Cui, Gao Wang, Nathan D. Elrod, Yumei Li, Yiling Elaine Chen, Ping Ji, Fanglue Peng, William K. Russell, Eric J. Wagner & Wei Li. ***Nature Genetics***,53,994-1005 **(2021)**. DOI:https://doi.org/10.1038/s41588-021-00864-5
-
-https://www.nature.com/articles/s41588-021-00864-5
 
 ## Contact
 For any issues, please create a GitHub Issue.
