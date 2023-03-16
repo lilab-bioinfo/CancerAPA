@@ -132,12 +132,12 @@ Each analysis has a demo input data under the folder.
 ## Instructions for use
 1. Definition of lead SNPs and trait-assocaited loci using `plink` clumping:
 ```
-> bash gwas_plink_clump.sh
+> bash run_plink_clump.sh
 ```
 
 2. Fine mmapping of trait-associated loci to defined credible SNPs:
 ```
-> bash gwas_finemapping.sh
+> bash run_finemapping.sh
 ```
 
 3. Estimate SNP heritability and genetic correlation:
