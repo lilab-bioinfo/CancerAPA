@@ -21,7 +21,6 @@ R and dependent packages
 * `data.table (1.14.2)`
 * `coloc (v5.1.1)`
 * `glmnet (4.1-3)`
-* `methods`
 * `MatrixEQTL(v2.1.0)`
 * `RColorBrewer`
 * `optparse (1.7.1)`
