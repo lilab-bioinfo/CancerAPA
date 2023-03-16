@@ -21,7 +21,11 @@ R and dependent packages
 * `data.table (1.14.2)`
 * `coloc (v5.2.1)`
 * `glmnet (4.1-3)`
+* `methods`
 * `MatrixEQTL(v2.3)`
+* `RColorBrewer`
+* `optparse (1.7.1)`
+* `plink2R (1.1)`
 
 Python and dependent packages
 * `Python (version >= v2.7.14)`
@@ -35,7 +39,8 @@ External software
 * `bedtools (>= v2.30.0)`
 * `samtools (>= v1.10)`
 * `CAVIAR (v2.2)`
-* 
+* `GCTA (1.93.3beta2)`
+* `GEMMA (0.98.5)`
 
 ## Installation guide (Time required: 30 min)
 We highly recommend using conda to setup and manage the software environment. The instructions below introduce how to setup the running environment with conda.
