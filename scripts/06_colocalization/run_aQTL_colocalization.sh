@@ -11,8 +11,7 @@ main(){
 
 
 global_parameters(){
-	#CUR_DIR=$(cd `dirname $0` && pwd -P)
-	CUR_DIR="/lustre/home/hchen/2021-10-31-cancer-GWAS/aQTL_coloc"
+	CUR_DIR=`pwd`
 	#origi_GWASs=$CUR_DIR/input/GWASs
 	#origi_microArray=$CUR_DIR/input/microArray
 	origi_transcript=$CUR_DIR/input/transcipt
@@ -37,15 +36,15 @@ create_folder(){
 
 
 split_3aQTLs(){
-	mkdir -p /lustre/home/hchen/2021-10-31-cancer-GWAS/aQTL_coloc/output/aQTLs_transcript
-	mkdir -p /lustre/home/hchen/2021-10-31-cancer-GWAS/aQTL_coloc/qsub
-for file in /lustre/home/hchen/2021-10-31-cancer-GWAS/aQTL_coloc/input/20210810_aQTLs_postionTohg19_for_coloc/*.cis_aqtl_hg19.txt
+	mkdir -p $CUR_DIR/output/aQTLs_transcript
+	mkdir -p $CUR_DIR/qsub
+for file in $CUR_DIR/input/*.cis_aqtl_hg19.txt
 	do
-		tissueName=`echo "$file" |awk -F"/" '{print $NF;exit}'|awk -F".cis_aqtl_hg19" '{print $1;exit}'`
-		cd /lustre/home/hchen/2021-10-31-cancer-GWAS/aQTL_coloc/output/aQTLs_transcript
+		tissueName=`echo "$file" |awk -F "/" '{print $NF;exit}'|awk -F".cis_aqtl_hg19" '{print $1;exit}'`
+		cd $CUR_DIR/output/aQTLs_transcript
 		if [[ ! -d "$tissueName" ]]
 			then
-				mkdir -p /lustre/home/hchen/2021-10-31-cancer-GWAS/aQTL_coloc/output/aQTLs_transcript/${tissueName}
+				mkdir -p $CUR_DIR/output/aQTLs_transcript/${tissueName}
 				echo '#!/bin/bash
 #PBS -N split_'${tissueName}'
 #PBS -q fat-1
@@ -61,13 +60,13 @@ echo "process will start at : "
 date
 echo "++++++++++++++++++++++++++++++++++++++++"
 #module load R/3.6.2-anaconda3
-cd /lustre/home/hchen/2021-10-31-cancer-GWAS/aQTL_coloc/input/20210810_aQTLs_postionTohg19_for_coloc/
-head -n1 $file >/lustre/home/hchen/2021-10-31-cancer-GWAS/aQTL_coloc/output/aQTLs_transcript/'$tissueName'_temptitle.txt
-tail -n +2 $file |sort -k3 > /lustre/home/hchen/2021-10-31-cancer-GWAS/aQTL_coloc/output/aQTLs_transcript/'$tissueName'_tempsorted.txt
+cd $CUR_DIR/input/
+head -n1 $file > $CUR_DIR/output/aQTLs_transcript/'$tissueName'_temptitle.txt
+tail -n +2 $file |sort -k3 > $CUR_DIR/output/aQTLs_transcript/'$tissueName'_tempsorted.txt
 wait
-cat /lustre/home/hchen/2021-10-31-cancer-GWAS/aQTL_coloc/output/aQTLs_transcript/'$tissueName'_temptitle.txt /lustre/home/hchen/2021-10-31-cancer-GWAS/aQTL_coloc/output/aQTLs_transcript/'$tissueName'_tempsorted.txt > /lustre/home/hchen/2021-10-31-cancer-GWAS/aQTL_coloc/output/aQTLs_transcript/'$tissueName'_tempmerged.txt
+cat $CUR_DIR/output/aQTLs_transcript/'$tissueName'_temptitle.txt $CUR_DIR/output/aQTLs_transcript/'$tissueName'_tempsorted.txt > /lustre/home/hchen/2021-10-31-cancer-GWAS/aQTL_coloc/output/aQTLs_transcript/'$tissueName'_tempmerged.txt
 wait
-python2 /lustre/home/hchen/2021-10-31-cancer-GWAS/coloc_analysis/bin/extract_gene.py /lustre/home/hchen/2021-10-31-cancer-GWAS/aQTL_coloc/output/aQTLs_transcript/'$tissueName'_tempmerged.txt /lustre/home/hchen/2021-10-31-cancer-GWAS/aQTL_coloc/output/aQTLs_transcript/'$tissueName'
+python2 $CUR_DIR/bin/extract_gene.py $CUR_DIR/output/aQTLs_transcript/'$tissueName'_tempmerged.txt $CUR_DIR/output/aQTLs_transcript/'$tissueName'
 wait
 rm /lustre/home/hchen/2021-10-31-cancer-GWAS/aQTL_coloc/output/aQTLs_transcript/'$tissueName'_temptitle.txt
 rm /lustre/home/hchen/2021-10-31-cancer-GWAS/aQTL_coloc/output/aQTLs_transcript/'$tissueName'_tempsorted.txt
@@ -81,10 +80,10 @@ date
 #module unload R/3.6.2-anaconda3
 rm -rf /tmp/nodefile.$$
 rm -rf /tmp/nodes.$$/
-wait'>/lustre/home/hchen/2021-10-31-cancer-GWAS/aQTL_coloc/qsub/split_${tissueName}.sh 
+wait'>$CUR_DIR/qsub/split_${tissueName}.sh 
 wait
-cd /lustre/home/hchen/2021-10-31-cancer-GWAS/aQTL_coloc/qsub/log
-#qsub /lustre/home/hchen/2021-10-31-cancer-GWAS/aQTL_coloc/qsub/split_${tissueName}.sh &
+cd $CUR_DIR/qsub/log
+#qsub $CUR_DIR/qsub/split_${tissueName}.sh &
 fi
 echo $tissueName" is finished"
 done
