@@ -88,10 +88,10 @@ We have developed a pipeline to analyze APA and call 3'aQTL before. Please refer
 ```
 
 ## Authors
-
-Hui Chen, Zeyang Wang, Jia Wang, Wenyan Chen, Xuelian Ma, Xudong Zou, Mireya Plass, Cheng Lian, Ting Ni, Gong-Hong Wei,  Wei Li, Lin Deng, Lei Li
-
-Institute of Systems and Physical Biology, Shenzhen Bay Laboratory, Shenzhen 518055, China
+Hui Chen (Institute of Systems and Physical Biology, Shenzhen Bay Laboratory)
+Wenyan Chen (Institute of Systems and Physical Biology, Shenzhen Bay Laboratory)
+Xudong Zou (Institute of Systems and Physical Biology, Shenzhen Bay Laboratory)
+Lei Li (Institute of Systems and Physical Biology, Shenzhen Bay Laboratory)
 
 ## Citation
 * Code and Execution:
