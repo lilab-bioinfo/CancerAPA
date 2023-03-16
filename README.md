@@ -90,8 +90,8 @@ We highly recommend using conda to setup and manage the software environment. Th
 
   - Clone the repo:
   ```
-  git clone https://github.com/bulik/ldsc.git
-  cd ldsc
+  > git clone https://github.com/bulik/ldsc.git
+  > cd ldsc
   ```
 
 * Install FUSION software package from github:
@@ -108,8 +108,8 @@ We highly recommend using conda to setup and manage the software environment. Th
   ```
   - Download and unpack the plink2R library：
   ```
-  wget https://github.com/gabraham/plink2R/archive/master.zip
-  unzip master.zip
+  > wget https://github.com/gabraham/plink2R/archive/master.zip
+  > unzip master.zip
   ```
   - Launch R and install required libraries:
   ```
