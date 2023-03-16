@@ -31,6 +31,7 @@ Python and dependent packages
 * `Python (version >= v2.7.14)`
 * `numpy`
 * `scipy`
+* `argparse`
 
 External software
 * `LDSC (v1.0.1)`
