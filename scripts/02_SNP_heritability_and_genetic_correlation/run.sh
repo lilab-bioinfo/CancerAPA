@@ -188,33 +188,16 @@ wait
 rm -rf /tmp/nodefile.$$
 rm -rf /tmp/nodes.$$/
 
-'> /lustre/home/ymhu/software/ldsc/qsub/"$i".vs."$j".sh
+'> ~/software/ldsc/qsub/"$i".vs."$j".sh
 					wait
-					qsub /lustre/home/ymhu/software/ldsc/qsub/"$i".vs."$j".sh
+					qsub ~/software/ldsc/qsub/"$i".vs."$j".sh
 					wait
 				
 			echo $trait" is all finished"
 			fi
 		fi
 
-	process=`qstat | grep "ymhu"|wc -l`
-		while (( process >= 300))
-		do
-			echo "Current number of jobs is larger than 300"
-			echo "Wait another 1 minutes"
-			sleep 1m
-			process=`qstat | grep "ymhu"|wc -l`
-		done
-		if [ $var -lt 1 ]
-		then
-			let "var+=1"
-			continue
-		fi
-		if [ $var -gt 1000000000 ]
-		then
-			break
-		fi
-		let "var += 1"
+
 	done
 done
 }
