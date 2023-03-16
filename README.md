@@ -28,7 +28,7 @@ Python and dependent packages
 * `scipy`
 
 External software
-* `tabix (v1.7)
+* `tabix (v1.7)`
 * `bedtools (>= v2.30.0)`
 * `samtools (>= v1.10)`
 * `plink 1.9 beta`
