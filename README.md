@@ -182,10 +182,15 @@ We have developed a pipeline to analyze APA and call 3'aQTL before. Please refer
     * Compute GTEx v8 APA predictive models:
     ```
     Rscript FUSION_compute_weights.R \
-    --bfile $INP \
-    --tmp $TMP \
-    --out $OUT \
-    --models top1,blup,bslmm,lasso,enet
+    --bfile ${tissName}.${GNAME} \
+    --tmp ${tissName}.${GNAME}.tmp \
+    --out ${tissName}.${GNAME} \
+    --PATH_plink $PLINK \
+    --PATH_gcta $GCTA \
+    --PATH_gemma $GEMMA \
+    --models top1,blup,lasso,enet \
+    --covar ${COVAR} \
+    --hsq_p 0.05 \
     ```
     
     * APA-based transcriptome wide association analysis
