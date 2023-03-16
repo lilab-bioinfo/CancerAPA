@@ -117,8 +117,14 @@ We highly recommend using conda to setup and manage the software environment. Th
   install.packages('plink2R-master/plink2R/',repos=NULL)
   ```
   - the following steps are required for computing weights
-  
-  
+    * Add the bundled `GCTA` binary to path
+    * Add `plink` to path
+    * Launch R and install the required libraries：
+    ```
+    install.packages(c('glmnet','methods'))
+    ```
+  - If using BSLMM, download and install `GEMMA` software, add to path. Generate a symbolic link to the output by calling ln -s ./ output in the directory where you will run FUSION.weights.R (this is a workaround because GEMMA requires results to go into an `output` subdirectory).
+
 ## Demo data for running the codes
 
 ## Instructions for use
