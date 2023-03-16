@@ -7,7 +7,7 @@
 
 In this study, we performed the first large-scale and systematic analysis assessing the genetic effects of APA on 25 cancer types in 49 human tissues from the Genotype-Tissue Expression(GTEx).
 
-This repository contains all source code for the analyses in manuscript ["A distinct class of pan-cancer susceptibility genes revealed by alternative polyadenylation transcriptome-wide association study".](https://medrxiv.org/cgi/content/short/2023.02.28.23286554v1) 
+This repository contains all source code for the analyses in manuscript "[A distinct class of pan-cancer susceptibility genes revealed by alternative polyadenylation transcriptome-wide association study](https://medrxiv.org/cgi/content/short/2023.02.28.23286554v1) ".
 
 ## System requirements
 ### Hardware and operating system requirements
@@ -94,7 +94,7 @@ Institute of Systems and Physical Biology, Shenzhen Bay Laboratory, Shenzhen 518
 ## Citation
 * Code and Execution:
 * Hui Chen^, Zeyang Wang^, Jia Wang^, Wenyan Chen, Xuelian Ma, Xudong Zou, Mireya Plass, Cheng Lian, Ting Ni, Gong-Hong Wei, Wei Li#, Lin Deng#, Lei Li# (2023)
-[A distinct class of pan-cancer susceptibility genes revealed by alternative polyadenylation transcriptome-wide association study](https://medrxiv.org/cgi/content/short/2023.02.28.23286554v1) (doi: https://doi.org/10.1101/2023.02.28.23286554)
+A distinct class of pan-cancer susceptibility genes revealed by alternative polyadenylation transcriptome-wide association study medrxiv 10.1101/2023.02.28.23286554
 
 ## Contact
 For any issues, please create a GitHub Issue.
