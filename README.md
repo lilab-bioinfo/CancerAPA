@@ -133,7 +133,7 @@ We highly recommend using conda to setup and manage the software environment. Th
 
 ## Demo data for running the codes
 
-Each analysis has a demo input data under the folder.
+Each analysis has a demo input data under the Scripts/ folder.
 
 ## Instructions for use
 1. Definition of lead SNPs and trait-assocaited loci using `plink` clumping:
