@@ -128,9 +128,9 @@ wait
 rm -rf /tmp/nodefile.$$
 rm -rf /tmp/nodes.$$/
 
-'> /lustre/home/ymhu/software/ldsc/qsub/"$CGID".sh
+'> ~/software/ldsc/qsub/"$CGID".sh
 					wait
-					qsub /lustre/home/ymhu/software/ldsc/qsub/"$CGID".sh
+					qsub ~/software/ldsc/qsub/"$CGID".sh
 					wait	
 	echo $CGID" is all finished"
 	
