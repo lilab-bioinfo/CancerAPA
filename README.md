@@ -61,6 +61,7 @@ We highly recommend using conda to setup and manage the software environment. Th
 > conda install -c bioconda Bioconductor-impute
 > conda install -c bioconda r-peer
 > conda install -c bioconda r-matrixeqtl
+> conda install -c bioconda r-coloc
 > conda install -c bioconda bedtools
 > conda install -c bioconda plink=1.90
 > conda install -c bioconda samtools
