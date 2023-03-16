@@ -19,7 +19,6 @@ get_tissue_gene_list(){
 #SBATCH --error=%j.err
 #SBATCH --output=%j.out
         
-DIR="/lustre/home/hchen/2021-10-31-cancer-GWAS/2022-09-19-CAVIAR-aQTL-finemapping"
 
         for file in ~/Data/GTEx_v8/aQTL/hg38/*.cis_aqtl_all_approachb.txt.gz
         do
@@ -61,9 +60,8 @@ date
 }
 
 finemapping_analysis(){
-VCF="/lustre/home/llei/Data/GTEx_v8/GTEx_Analysis_2017-06-05_v8_WholeGenomeSeq_838Indiv_Analysis_Freeze.SHAP
-EIT2_phased.vcf.gz" 
-GENELOC="/lustre/home/hchen/2021-10-31-cancer-GWAS/aQTL_pipeline/Input_gene_locs/gene_3UTR_loc_hg38.txt" ## hg19
+VCF="~/Data/GTEx_v8/GTEx_Analysis_2017-06-05_v8_WholeGenomeSeq_838Indiv_Analysis_Freeze.SHAPEIT2_phased.vcf.gz" 
+GENELOC="~/aQTL_pipeline/Input_gene_locs/gene_3UTR_loc_hg38.txt" ## hg19
 
 for LSB_JOBINDEX in `seq 1 189116` 
         do
