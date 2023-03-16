@@ -16,13 +16,13 @@ A workstation or computer cluster running a POXIS system (Unix, Linux, or macOS)
 ### Software and dependencies
 R and dependent packages
 
-* `R (>= v3.6.2)`
+* `R (>= v3.6.1)`
 * `PEER (v1.3)`
 * `data.table (1.14.2)`
-* `coloc (v5.2.1)`
+* `coloc (v5.1.1)`
 * `glmnet (4.1-3)`
 * `methods`
-* `MatrixEQTL(v2.3)`
+* `MatrixEQTL(v2.1.0)`
 * `RColorBrewer`
 * `optparse (1.7.1)`
 * `plink2R (1.1)`
@@ -40,6 +40,7 @@ External software
 * `samtools (>= v1.10)`
 * `DaPars (v2.1)`
 * `CAVIAR (v2.2)`
+* `fgwas(0.3.6)`
 * `GCTA (1.93.3beta2)`
 * `GEMMA (0.98.5)`
 
