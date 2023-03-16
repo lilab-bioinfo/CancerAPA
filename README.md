@@ -173,7 +173,7 @@ We have developed a pipeline to analyze APA and call 3'aQTL before. Please refer
 7. Build and run 3'TWAS model
 
 ```
-> bash aTWAS_Model_fusion.sh
+> bash 07_3aTWAS_pipeline/run.sh
 ```
 
 ## Authors
