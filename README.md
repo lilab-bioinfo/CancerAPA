@@ -32,6 +32,7 @@ External software
 * `bedtools (>= v2.30.0)`
 * `samtools (>= v1.10)`
 * `plink 1.9 beta`
+* `CAVIAR (v2.2)`
 
 ## Installation guide (Time required: 30 min)
 We highly recommend using conda to setup and manage the software environment. The instructions below introduce how to setup the running environment with conda.
