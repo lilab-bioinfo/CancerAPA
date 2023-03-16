@@ -21,7 +21,7 @@ get_tissue_gene_list(){
         
 DIR="/lustre/home/hchen/2021-10-31-cancer-GWAS/2022-09-19-CAVIAR-aQTL-finemapping"
 
-        for file in /lustre/home/llei/Data/GTEx_v8/aQTL/hg38/*.cis_aqtl_all_approachb.txt.gz
+        for file in ~/Data/GTEx_v8/aQTL/hg38/*.cis_aqtl_all_approachb.txt.gz
         do
         filename=${file##*/}
         tissue=${filename%.cis_aqtl_all_approachb.txt.gz}
@@ -35,13 +35,13 @@ sbatch get_tissue_gene_list.sh
 }
 
 split_file(){
-for file in /lustre/home/llei/Data/GTEx_v8/aQTL/hg38/*.cis_aqtl_all_approachb.txt.gz
+for file in ~/Data/GTEx_v8/aQTL/hg38/*.cis_aqtl_all_approachb.txt.gz
                 do
                 filename=${file##*/}
                 tissue=${filename%.cis_aqtl_all_approachb.txt.gz}
                 echo ${tissue}
                 echo -e '#!/bin/bash
-#SBATCH --job-name='"'"'get_list'"'"'
+#SBATCH --job-name=\'get_list\'
 #SBATCH --partition=cu-1
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=5
@@ -65,7 +65,7 @@ VCF="/lustre/home/llei/Data/GTEx_v8/GTEx_Analysis_2017-06-05_v8_WholeGenomeSeq_8
 EIT2_phased.vcf.gz" 
 GENELOC="/lustre/home/hchen/2021-10-31-cancer-GWAS/aQTL_pipeline/Input_gene_locs/gene_3UTR_loc_hg38.txt" ## hg19
 
-for LSB_JOBINDEX in `seq 96543 100000` #done:`seq 109117 149117` #all:1 189116; already done: 1 9999
+for LSB_JOBINDEX in `seq 1 189116` 
         do
                 EGENE=`less $DIR/input/GTEx_gene_list.txt|sed -n ${LSB_JOBINDEX},${LSB_JOBINDEX}p|cut -f 2 `
                 TISSUE=`less $DIR/input/GTEx_gene_list.txt|sed -n ${LSB_JOBINDEX},${LSB_JOBINDEX}p|cut -f 1 `
