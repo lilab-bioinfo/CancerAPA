@@ -29,8 +29,7 @@ run_filterVCF(){
 	for i in {2..839}
 	do
 	cd ~/aQTL_pipeline/input/vcf/temp
-	#if [[ ! -f GTEx_Analysis_2017-06-05_v8_WholeGenomeSeq_838Indiv_Analysis_Freeze.SHAPEIT2_phased_SNP_"$i" ]]
-	#then
+
 	echo "#!/bin/bash
 #PBS -N filterVCF_'$i'
 #PBS -q cu-1
@@ -42,8 +41,8 @@ echo "process will start at : "
 date
 echo "++++++++++++++++++++++++++++++++++++++++"
 module load R/3.6.2-anaconda3
-cd /lustre/home/ymhu/aQTL_pipeline/input
-#zcat GTEx_Analysis_2017-06-05_v8_WholeGenomeSeq_838Indiv_Analysis_Freeze.SHAPEIT2_phased_SNP.vcf.gz | cut -f'$i' - > /lustre/home/ymhu/aQTL_pipeline/input/vcf/temp/GTEx_Analysis_2017-06-05_v8_WholeGenomeSeq_838Indiv_Analysis_Freeze.SHAPEIT2_phased_SNP_'$i' 
+cd ~/aQTL_pipeline/input
+#zcat GTEx_Analysis_2017-06-05_v8_WholeGenomeSeq_838Indiv_Analysis_Freeze.SHAPEIT2_phased_SNP.vcf.gz | cut -f'$i' - > ~/aQTL_pipeline/input/vcf/temp/GTEx_Analysis_2017-06-05_v8_WholeGenomeSeq_838Indiv_Analysis_Freeze.SHAPEIT2_phased_SNP_'$i' 
 python3 ~/aQTL_pipeline/bin/GTEx_V8_single_filter_SNPs_addcovariates.py -p ~/aQTL_pipeline/input/vcf/temp/GTEx_Analysis_2017-06-05_v8_WholeGenomeSeq_838Indiv_Analysis_Freeze.SHAPEIT2_phased_SNP_'$i' -i ~/aQTL_pipeline/input/GTEx_covariates.v8.txt -o ~/aQTL_pipeline/input/filter/
 wait
 echo "processs will sleep 10s"
@@ -59,12 +58,11 @@ rm -rf /tmp/nodes.$$/
 wait
 qsub ~/aQTL_pipeline/qsub/filterVCF/filterVCF_${i}.sh
 echo "filterVCF_"${i}" is all finished"
-#fi
+
 wait
 
 
 done
-
 
 }
 
@@ -74,7 +72,7 @@ run_pastefilterVCF(){
 	for i in ~/aQTL_pipeline/Input_Covariates/Covariates_by_tissue/*.v8.covariates.txt
 	do
 	traitName=`echo "$i" |awk -F"/" '{print $NF;exit}'|awk -F".v8." '{print $1;exit}'`
-	cd /lustre/home/ymhu/aQTL_pipeline/output
+	cd ~/aQTL_pipeline/output
 	if [[ ! -f "$traitName"_SNPs.vcf_genotype.vcf ]]
 	then
 	echo "#!/bin/bash
