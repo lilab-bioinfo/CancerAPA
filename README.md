@@ -177,10 +177,20 @@ We have developed a pipeline to analyze APA and call 3'aQTL before. Please refer
 ```
 
 7. Build 3'TWAS model and run association analysis
-
-```
-> bash 07_3aTWAS_pipeline/run.sh
-```
+    * Compute GTEx v8 APA predictive models:
+    ```
+    Rscript FUSION_compute_weights.R \
+    --bfile $INP \
+    --tmp $TMP \
+    --out $OUT \
+    --models top1,blup,bslmm,lasso,enet
+    ```
+    
+    * APA-based transcriptome wide association analysis
+     - Input: GWAS summary statistics
+    ```
+    > bash 07_3aTWAS_pipeline/run.sh
+    ```
 
 ## Authors
 
