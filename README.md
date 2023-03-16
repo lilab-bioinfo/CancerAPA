@@ -93,9 +93,8 @@ Institute of Systems and Physical Biology, Shenzhen Bay Laboratory, Shenzhen 518
 
 ## Citation
 * Code and Execution:
-Hui Chen^, Zeyang Wang^, Jia Wang^, Wenyan Chen, Xuelian Ma, Xudong Zou, Mireya Plass, Cheng Lian, Ting Ni, Gong-Hong Wei, Wei Li#, Lin Deng#, Lei Li#
-[A distinct class of pan-cancer susceptibility genes revealed by alternative polyadenylation transcriptome-wide association study]
-(https://medrxiv.org/cgi/content/short/2023.02.28.23286554v1) (doi: https://doi.org/10.1101/2023.02.28.23286554)
+* Hui Chen^, Zeyang Wang^, Jia Wang^, Wenyan Chen, Xuelian Ma, Xudong Zou, Mireya Plass, Cheng Lian, Ting Ni, Gong-Hong Wei, Wei Li#, Lin Deng#, Lei Li# (2023)
+[A distinct class of pan-cancer susceptibility genes revealed by alternative polyadenylation transcriptome-wide association study](https://medrxiv.org/cgi/content/short/2023.02.28.23286554v1) (doi: https://doi.org/10.1101/2023.02.28.23286554)
 
 ## Contact
 For any issues, please create a GitHub Issue.
