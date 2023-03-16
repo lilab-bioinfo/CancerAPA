@@ -18,9 +18,10 @@ R and dependent packages
 
 * `R (>= v3.6.2)`
 * `PEER (v1.3)`
-* `data.table`
-* `coloc(v5.2.1)`
-* `glmnet`
+* `data.table (1.14.2)`
+* `coloc (v5.2.1)`
+* `glmnet (4.1-3)`
+* `MatrixEQTL(v2.3)`
 
 Python and dependent packages
 * `Python (version >= v2.7.14)`
@@ -29,10 +30,10 @@ Python and dependent packages
 
 External software
 * `LDSC (v1.0.1)`
+* `plink 1.9 beta`
 * `tabix (v1.7)`
 * `bedtools (>= v2.30.0)`
 * `samtools (>= v1.10)`
-* `plink 1.9 beta`
 * `CAVIAR (v2.2)`
 * 
 
