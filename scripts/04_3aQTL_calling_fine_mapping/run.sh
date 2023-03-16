@@ -7,7 +7,6 @@ main(){
 	#link_all_pdui
 	#get_id_file
 	#filter_vcftools
-	#get_BioAlcidae
 	#vcf_to_snpmatrix
 	#run_peer
 	run_matrixeqtl
