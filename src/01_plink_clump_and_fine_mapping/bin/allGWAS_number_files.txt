@@ -1,0 +1,8 @@
+-s      -p      Class   CGID    GLGC
+89677   EUR     Breast  CG0050  GLGC_CG0050_result.txt
+69626   EUR     Breast  CG0051  GLGC_CG0051_result.txt
+139274  EUR     Breast  CG0052  GLGC_CG0052_result.txt
+72261   EUR     Breast  CG0055  GLGC_CG0055_result.txt
+247173  EUR     Breast  CG0056  GLGC_CG0056_result.txt
+80343   EUR     Breast  CG0057  GLGC_CG0057_result.txt
+194153  EUR     Breast  CG0058  GLGC_CG0058_result.txt

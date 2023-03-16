@@ -1,0 +1,1 @@
+APA quantification and 3'aQTL mapping: We have developed a pipeline to analyze APA and call 3'aQTL before. Please refer to our [3aQTL-pipe](https://github.com/3UTR/3aQTL-pipe) for detailed instructions.
