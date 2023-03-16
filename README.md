@@ -95,9 +95,7 @@ We have developed a pipeline to analyze APA and call 3'aQTL before. Please refer
 
 ## Authors
 
-Hui Chen, Wenyan Chen, Xudong Zou, Lei Li 
-
-Institute of Systems and Physical Biology, Shenzhen Bay Laboratory
+Hui Chen, Wenyan Chen, Xudong Zou, Lei Li (Institute of Systems and Physical Biology, Shenzhen Bay Laboratory)
 
 ## Citation
 
