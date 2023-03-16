@@ -95,7 +95,7 @@ We highly recommend using conda to setup and manage the software environment. Th
   > cd ldsc
   ```
   
-  - Create an environment with LDSC's dependencies:
+  - Create an Anaconda environment with LDSC's dependencies:
   ```
   > conda env create --file environment.yml
   > source activate ldsc
