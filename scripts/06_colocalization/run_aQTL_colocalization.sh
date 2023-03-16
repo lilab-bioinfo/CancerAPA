@@ -64,13 +64,13 @@ cd $CUR_DIR/input/
 head -n1 $file > $CUR_DIR/output/aQTLs_transcript/'$tissueName'_temptitle.txt
 tail -n +2 $file |sort -k3 > $CUR_DIR/output/aQTLs_transcript/'$tissueName'_tempsorted.txt
 wait
-cat $CUR_DIR/output/aQTLs_transcript/'$tissueName'_temptitle.txt $CUR_DIR/output/aQTLs_transcript/'$tissueName'_tempsorted.txt > /lustre/home/hchen/2021-10-31-cancer-GWAS/aQTL_coloc/output/aQTLs_transcript/'$tissueName'_tempmerged.txt
+cat $CUR_DIR/output/aQTLs_transcript/'$tissueName'_temptitle.txt $CUR_DIR/output/aQTLs_transcript/'$tissueName'_tempsorted.txt >  $CUR_DIR/output/aQTLs_transcript/'$tissueName'_tempmerged.txt
 wait
 python2 $CUR_DIR/bin/extract_gene.py $CUR_DIR/output/aQTLs_transcript/'$tissueName'_tempmerged.txt $CUR_DIR/output/aQTLs_transcript/'$tissueName'
 wait
-rm /lustre/home/hchen/2021-10-31-cancer-GWAS/aQTL_coloc/output/aQTLs_transcript/'$tissueName'_temptitle.txt
-rm /lustre/home/hchen/2021-10-31-cancer-GWAS/aQTL_coloc/output/aQTLs_transcript/'$tissueName'_tempsorted.txt
-rm /lustre/home/hchen/2021-10-31-cancer-GWAS/aQTL_coloc/output/aQTLs_transcript/'$tissueName'_tempmerged.txt
+rm  $CUR_DIR/output/aQTLs_transcript/'$tissueName'_temptitle.txt
+rm  $CUR_DIR/output/aQTLs_transcript/'$tissueName'_tempsorted.txt
+rm  $CUR_DIR/output/aQTLs_transcript/'$tissueName'_tempmerged.txt
 
 wait
 echo "processs will sleep 30s"
@@ -101,7 +101,7 @@ run_sential_SNPs(){
 			trait=`echo "$GWASfolder" | awk -F"/" '{print $NF }'`
 			echo ${trait}
 			#mkdir -p $CUR_DIR/output/sentinalSNP/${trait}/src_pvalue_maf
-			sentinalSNP_folder=/lustre/home/hchen/2021-10-31-cancer-GWAS/coloc_analysis/output/sentinelSNP/"$trait"
+			sentinalSNP_folder= $CUR_DIR/output/sentinelSNP/"$trait"
 			cd $sentinalSNP_folder
 
 			if [[ ! -f "sentinalSNP.txt" ]] && [[ ! -f "sentinalSNP_was_empty.txt" ]]
@@ -164,7 +164,7 @@ run_coloc_analysis(){
 			trait=`echo "$GWASfolder" | awk -F "/" '{print $NF }'`
 			echo ${trait}
 			#mkdir -p $CUR_DIR/output/sentinalSNP/${trait}/src_pvalue_maf
-			sentinalSNP_folder=/lustre/home/hchen/2021-10-31-cancer-GWAS/coloc_analysis/output/sentinelSNP/"$trait"
+			sentinalSNP_folder= $CUR_DIR/output/sentinelSNP/"$trait"
 			cd $sentinalSNP_folder
 
 			if [[ ! -f "sentinalSNP.txt" ]] && [[ ! -f "sentinalSNP_was_empty.txt" ]]
@@ -239,14 +239,6 @@ rm -rf /tmp/nodes.$$/
 			fi
 		fi
 
-#		process=`squeue -u ymhu|wc -l`
-#		while (( process >= 1000))
-#		do
-#			echo "Current number of jobs is larger than 30"
-#			echo "Wait another 5 minutes"
-#			sleep 5m
-#			process=`squeue -u ymhu|wc -l`
-#		done
 
 		if [ "`ls $GWASfolder`" != "" ]
 		then
@@ -259,8 +251,7 @@ rm -rf /tmp/nodes.$$/
 				if [ "`ls $folder`" != "" ]
 				then
 					tissue=`echo "$folder" | awk -F"/" '{print $NF }'`
-					#if [ $tissue = "Skin_Not_Sun_Exposed_Suprapubic" ]
-					#then
+			
 					mkdir -p $CUR_DIR/output/results_transcript/"$trait"/"$tissue"_"$trait"
 					if [ -d $CUR_DIR/output/results_transcript/"$trait"/"$tissue"_"$trait"/src_pvalue_maf/ ]
 					then
