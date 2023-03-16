@@ -177,6 +177,7 @@ We have developed a pipeline to analyze APA and call 3'aQTL before. Please refer
 ```
 
 7. Build 3'TWAS model and run association analysis
+
     * Compute GTEx v8 APA predictive models:
     ```
     Rscript FUSION_compute_weights.R \
@@ -187,10 +188,20 @@ We have developed a pipeline to analyze APA and call 3'aQTL before. Please refer
     ```
     
     * APA-based transcriptome wide association analysis
-     - Input: GWAS summary statistics
-    ```
-    > bash 07_3aTWAS_pipeline/run.sh
-    ```
+      - Input: GWAS summary statistics
+        
+        The input of GWAS summary statistics is in LD-score format, which mainly contain the following columns:
+          1. `SNP` : SNP identifier(rsID)
+          2. `A1` : first allele (effect allele)
+          3. `A2` : second allel (other allele)
+          4. `Z` : Z-score,sign with respect to `A1`
+
+      - Input: APA weights
+          
+          The reference data are loaded using the `./WEIGHTS/${tissueName}.pos` which points to the individual `*RDat` weights files, their gene identifiers, physical positions. Only weights in the file will be evaluated.
+      
+      - Performing the APA level imputation
+  
 
 ## Authors
 
