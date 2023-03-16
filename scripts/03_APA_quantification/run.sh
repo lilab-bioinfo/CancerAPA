@@ -68,7 +68,7 @@ wait
 }
 
 create_subtissues(){
-        for file in /dfs5/dfs3/weil21-lab/yumeil1/data/GTEx/subTissues/*.sampleID
+        for file in ~/data/GTEx/subTissues/*.sampleID
         do
                 filename=${file##*/}
                 tissue=${filename%.sampleID}
@@ -93,8 +93,7 @@ do
 #SBATCH --cpus-per-task=3
 module load R/3.6.2
 module load bedtools2/2.29.2
-~/anaconda2/bin/python /dfs5/weil21-lab2/leil22/GTEx/bin/DaPars2_for_tumor_alone_without_extension.py mapping_joint_
-Analysis_DaPars_each_chr_configure.txt ${files[$i]}" > ${filename}_dapars.sh
+~/anaconda2/bin/python ~/GTEx/bin/DaPars2_for_tumor_alone_without_extension.py mapping_joint_Analysis_DaPars_each_chr_configure.txt ${files[$i]}" > ${filename}_dapars.sh
 wait
 #sbatch ${filename}_dapars.sh
 wait
@@ -126,8 +125,7 @@ wait
         fi
         done
 
-#ls *expr.peer.txt|while read i; do echo -e "$i\t`awk '{print NF}' $i|head -n1`\t`awk '{print NF}' ../input/${i%.exp
-r.peer.txt}_combined_All_PDUIs_clean.txt|head -n1`";done|less       
+#ls *expr.peer.txt|while read i; do echo -e "$i\t`awk '{print NF}' $i|head -n1`\t`awk '{print NF}' ../input/${i%.expr.peer.txt}_combined_All_PDUIs_clean.txt|head -n1`";done|less       
 
 }
 
