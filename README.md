@@ -46,7 +46,7 @@ External software
 * `GEMMA (0.98.5)`
 * `FUSION`
 
-## Installation guide (Time required: 30 min)
+## Installation guide
 We highly recommend using conda to setup and manage the software environment. The instructions below introduce how to setup the running environment with conda.
 
 * Install python and conda. Download installer script “Anaconda2-2019.10-Linux-x86_64.sh” from [Anaconda Repository](https://repo.anaconda.com/archive/). Python and conda will be installed in $HOME/anaconda2/bin by default.
@@ -67,7 +67,7 @@ We highly recommend using conda to setup and manage the software environment. Th
 > conda install -c bioconda vcftools
 > conda install -c bioconda tabix
 ```
-* Install CASUALdb
+* Install CASUALdb for GWAS summary statistics based fine-mapping
 ```
 # Clone the repo:
 > git clone https://github.com/mulinlab/CAUSALdb-finemapping-pip.git
@@ -82,10 +82,23 @@ We highly recommend using conda to setup and manage the software environment. Th
 > python 01_prepare_reference.py
 > cd ..
 ```
+* Install LDSC for estimating heritability and genetic correlation from GWAS summary statisctics.
+
+  - Clone the repo:
+  ```
+  git clone https://github.com/bulik/ldsc.git
+  cd ldsc
+  ```
+
 * Install FUSION software package from github:
 ```
 > wget -c  https://github.com/gusevlab/fusion_twas/archive/master.zip
+> unzip master.zip
+> cd fusion_twas-master
 
+# Download and unpack the 1000Genome LD reference data:
+> wget -c https://data.broadinstitute.org/alkesgroup/FUSION/LDREF.tar.bz2
+> tar xjvf LDREF.tar.bz2
 ```
 ## Demo data for running the codes
 
