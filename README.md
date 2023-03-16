@@ -82,7 +82,7 @@ bash enrich_aQTL_in_GWAS.sh
   
 5. Build and run 3aTWAS model
 ```
-
+> bash aTWAS_Model_fusion.sh
 ```
   
 
