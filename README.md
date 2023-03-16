@@ -201,7 +201,17 @@ We have developed a pipeline to analyze APA and call 3'aQTL before. Please refer
           The reference data are loaded using the `./WEIGHTS/${tissueName}.pos` which points to the individual `*RDat` weights files, their gene identifiers, physical positions. Only weights in the file will be evaluated.
       
       - Performing the APA level imputation
-  
+        
+        ```
+        Rscript FUSION.assoc_test.R \
+        --sumstats
+        --weights
+        --weights_dir ./WEIGHTS/ \
+        --ref_ld_chr ./LDREF/1000G.EUR. \
+        --chr ${chr} \
+        --out .dat
+        
+        ```
 
 ## Authors
 
