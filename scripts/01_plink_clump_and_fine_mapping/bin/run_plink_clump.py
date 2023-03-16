@@ -53,10 +53,10 @@ def main(args):
 		if os.path.exists("./plink_input/"+filename):
 			if os.path.getsize("./plink_input/"+filename) > 55:
 				if not os.path.exists("./plink_output/"+filename.split(".")[0]+".significant"):
-					print_run("plink --clump /media/Rome/yueming/20210125_GWASs/output/plink_input/"+filename+" --bfile /home/yueming/software/magma_v1.08b_static/"+genome+"/"+genome+" --clump-r2 0.60 --clump-p1 0.00000005 --clump-p2 0.05 --out /media/Rome/yueming/20210125_GWASs/output/plink_output/"+filename.split('.')[0]+".significant")
+					print_run("plink --clump ~/20210125_GWASs/output/plink_input/"+filename+" --bfile ~/software/magma_v1.08b_static/"+genome+"/"+genome+" --clump-r2 0.60 --clump-p1 0.00000005 --clump-p2 0.05 --out ~/20210125_GWASs/output/plink_output/"+filename.split('.')[0]+".significant")
 				if not os.path.exists("./plink_output/"+filename.split(".")[0]+".lead"):
-					print_run("plink --clump /media/Rome/yueming/20210125_GWASs/output/plink_input/"+filename+" --bfile /home/yueming/software/magma_v1.08b_static/"+genome+"/"+genome+" --clump-r2 0.10 --clump-p1 0.00000005 --clump-p2 0.05 --out /media/Rome/yueming/20210125_GWASs/output/plink_output/"+filename.split('.')[0]+".lead")
+					print_run("plink --clump ~/20210125_GWASs/output/plink_input/"+filename+" --bfile ~/software/magma_v1.08b_static/"+genome+"/"+genome+" --clump-r2 0.10 --clump-p1 0.00000005 --clump-p2 0.05 --out ~/20210125_GWASs/output/plink_output/"+filename.split('.')[0]+".lead")
 				if not os.path.exists("./plink_output/"+filename.split(".")[0]+".top"):
-					print_run("plink --clump /media/Rome/yueming/20210125_GWASs/output/plink_input/"+filename+" --bfile /home/yueming/software/magma_v1.08b_static/"+genome+"/"+genome+" --clump-r2 0.10 --clump-p1 0.00000005 --clump-p2 0.05 --clump-kb 250 --out /media/Rome/yueming/20210125_GWASs/output/plink_output/"+filename.split('.')[0]+".top")				
+					print_run("plink --clump ~/20210125_GWASs/output/plink_input/"+filename+" --bfile ~/software/magma_v1.08b_static/"+genome+"/"+genome+" --clump-r2 0.10 --clump-p1 0.00000005 --clump-p2 0.05 --clump-kb 250 --out ~/20210125_GWASs/output/plink_output/"+filename.split('.')[0]+".top")				
 if __name__ == '__main__':
 	main(args)
