@@ -73,7 +73,7 @@ We highly recommend using conda to setup and manage the software environment. Th
 ```
 
 3. APA quantification and 3'aQTL mapping
-We have developed a pipeline to analyze APA and call 3'aQTL before. Please refer to our [3aQTL-pipe]() for detailed instructions.
+We have developed a pipeline to analyze APA and call 3'aQTL before. Please refer to our [3aQTL-pipe](https://github.com/3UTR/3aQTL-pipe) for detailed instructions.
 
 4. Enrichment of 3'aQTL in cancer GWAS signals
 ```
