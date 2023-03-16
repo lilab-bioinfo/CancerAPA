@@ -135,7 +135,7 @@ Each analysis has a demo input data under the folder.
 > bash run_plink_clump.sh
 ```
 
-2. Fine mmapping of trait-associated loci to defined credible SNPs:
+2. Fine mapping of trait-associated loci to defined credible SNPs:
 
 ```
 > bash run_finemapping.sh
