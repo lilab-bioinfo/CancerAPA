@@ -1,2 +1,0 @@
-path     -s      -p
-GLGC_CG0015_result.txt  139274  EUR
