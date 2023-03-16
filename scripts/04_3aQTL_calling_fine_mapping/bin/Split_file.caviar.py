@@ -6,7 +6,7 @@ from collections import defaultdict
 
 
 def split_qtl(tissue_name):
-    qtl_file = "/lustre/home/llei/Data/GTEx_v8/aQTL/hg38/"+tissue_name+".cis_aqtl_all_approachb.txt.gz"
+    qtl_file = "~/Data/GTEx_v8/aQTL/hg38/"+tissue_name+".cis_aqtl_all_approachb.txt.gz"
     line_count=0
     gene_dict={}
     gene_dict_gcta=defaultdict(list)
@@ -40,7 +40,7 @@ def split_qtl(tissue_name):
     caviar = dict((k, tuple(v)) for k, v in gene_dict_caviar.iteritems())
     print(caviar)
     for current_gene in d:
-        gene_directory="/lustre/home/hchen/2021-10-31-cancer-GWAS/2022-09-19-CAVIAR-aQTL-finemapping/output/"+tissue_name+"/"+current_gene
+        gene_directory="${WORK_DIR}/output/"+tissue_name+"/"+current_gene
         if not os.path.exists(gene_directory):
             os.makedirs(gene_directory)
         output_file_caviar=gene_directory+"/"+tissue_name+"_3aQTL_all_ttest.txt"
