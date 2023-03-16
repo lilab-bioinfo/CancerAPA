@@ -168,13 +168,13 @@ for chr  in `less $WORK_DIR/WEIGHTS/'${tissueName}'.pos|awk \'NR>1{print $3}\'|s
                         echo "'${GWAS}'_"'${tissueName}'"_chr"${chr}" have done!"
                         continue
                 else
-                Rscript /lustre/home/hchen/2021-10-31-cancer-GWAS/aTWAS/fusion/bin/fusion_twas-master/FUSION.assoc_test.R \
+                Rscript $WORK_DIR/bin/fusion_twas-master/FUSION.assoc_test.R \
                 --sumstats '${file}' \
-                --weights /lustre/home/hchen/2021-10-31-cancer-GWAS/aTWAS/fusion/2022-02-17-build-weight/output_FDR0.05_new/WEIGHTS/'${tissueName}'.pos  \
-                --weights_dir /lustre/home/hchen/2021-10-31-cancer-GWAS/aTWAS/fusion/2022-02-17-build-weight/output_FDR0.05_new/WEIGHTS/ \
-                --ref_ld_chr /lustre/home/hchen/2021-10-31-cancer-GWAS/aTWAS/fusion/bin/fusion_twas-master/LDREF/1000G.EUR. \
+                --weights $WORK_DIR/output/WEIGHTS/'${tissueName}'.pos  \
+                --weights_dir $WORK_DIR/output/WEIGHTS/ \
+                --ref_ld_chr $WORK_DIR/bin/fusion_twas-master/LDREF/1000G.EUR. \
                 --chr ${chr} \
-                --out /lustre/home/hchen/2021-10-31-cancer-GWAS/aTWAS/fusion/results_new/'${GWAS}'/'${tissueName}'/'${GWAS}'.'${tissueName}'.chr${chr}.dat 
+                --out $WORK_DIR/results/'${GWAS}'/'${tissueName}'/'${GWAS}'.'${tissueName}'.chr${chr}.dat 
                 
                 fi
                
