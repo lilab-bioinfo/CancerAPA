@@ -36,7 +36,23 @@ External software
 ## Installation guide
 We highly recommend using conda to setup and manage the software environment. The instructions below introduce how to setup the running environment with conda.
 
-
+1. Install python and conda. Download installer script “Anaconda2-2019.10-Linux-x86_64.sh” from [Anaconda Repository](https://repo.anaconda.com/archive/). Python and conda will be installed in $HOME/anaconda2/bin by default.
+```
+> bash Anaconda2-2019.10-Linux-x86_64.sh
+```
+2. Install other software and dependencies with conda
+```
+> conda install -c conda-forge r-base
+> conda install -c conda-forge r-dplyr
+> conda install -c bioconda r-optparse
+> conda install -c bioconda Bioconductor-impute
+> conda install -c bioconda r-peer
+> conda install -c bioconda r-matrixeqtl
+> conda install -c bioconda bedtools
+> conda install -c bioconda plink=1.90
+> conda install -c bioconda samtools
+> conda install -c bioconda vcftools
+```
 
 ## Outline of the analyses
 
