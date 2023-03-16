@@ -38,6 +38,7 @@ External software
 * `tabix (v1.7)`
 * `bedtools (>= v2.30.0)`
 * `samtools (>= v1.10)`
+* `DaPars (v2.1)`
 * `CAVIAR (v2.2)`
 * `GCTA (1.93.3beta2)`
 * `GEMMA (0.98.5)`
