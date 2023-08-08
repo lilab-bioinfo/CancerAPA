@@ -13,7 +13,7 @@ system("echo inside import")
 system(paste("echo",R_ver))
 system("echo ===========================")
 
-lp <- "/lustre/home/hchen/R/x86_64-conda_cos6-linux-gnu-library/3.6"
+lp <- "~/R/x86_64-conda_cos6-linux-gnu-library/3.6"
 .libPaths(lp)
 
 require(hash,lib=lp)
@@ -712,10 +712,10 @@ get_chrom_lengths <- function(Chromosomes=as.character(seq(from=1,to=22))){
   #   genome<-data.frame(V1, V2, stringsAsFactors = FALSE)
 
   # Website with chromosome length info:
-  #link <- '/lustre/home/hchen/2021-10-31-cancer-GWAS/00data/hg19.chrom.sizes'
+  #link <- '~/2021-10-31-cancer-GWAS/00data/hg19.chrom.sizes'
 
   # Import table
-  table <- read.table("/lustre/home/hchen/2021-10-31-cancer-GWAS/00data/hg19.chrom.sizes", stringsAsFactors = FALSE)
+  table <- read.table("~/2021-10-31-cancer-GWAS/00data/hg19.chrom.sizes", stringsAsFactors = FALSE)
 
   # Initialize chromsomes and lengths vectors
   chromsomes<- c()
@@ -767,7 +767,7 @@ get_command_args <- function(args){
 
 
 import_microarray_table <- function(){
-  microArray_alnTable_file <- "/lustre/home/hchen/2021-10-31-cancer-GWAS/aQTL_coloc/output/microArray/final/allTissue_hg19_microArray.txt"    #edit by zhec: change the path of microArray_alnTable
+  microArray_alnTable_file <- "~/2021-10-31-cancer-GWAS/aQTL_coloc/output/microArray/final/allTissue_hg19_microArray.txt"    #edit by zhec: change the path of microArray_alnTable
   microArray_alnTable <- na.omit(fread(input=microArray_alnTable_file,
                                        stringsAsFactors = FALSE,
                                        data.table = FALSE,
@@ -791,7 +791,7 @@ import_microarray_table <- function(){
 }
 
 get_gene_TssTes <- function(Genes, only_TssTes = TRUE,
-                            transcripts_file="/lustre/home/hchen/2021-10-31-cancer-GWAS/aQTL_coloc/output/bed/hg19/allTissue_hg19.bed"){
+                            transcripts_file="~/2021-10-31-cancer-GWAS/aQTL_coloc/output/bed/hg19/allTissue_hg19.bed"){
   # This function imports a human genome transcripts file, and returns a dictionary of
   # gene TSSs and TESs given a vector of genes to look up.
   #

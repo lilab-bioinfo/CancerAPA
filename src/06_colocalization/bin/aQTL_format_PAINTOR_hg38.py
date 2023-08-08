@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-#cd /lustre/home/ymhu/aQTL_pipeline
-#python /lustre/home/ymhu/aQTL_pipeline/bin/aQTL_format_PAINTOR_hg38.py -c /lustre/home/ymhu/aQTL_pipeline/Whole_Blood.cis_eqtl_all_approachb.txt.gz -i /lustre/home/ymhu/TWAS/input/data/gtex_v8_eur_filtered_maf0.01_monoallelic_variants.txt.gz -o /lustre/home/ymhu/aQTL_pipeline/20210718_aQTLs_postionTohg38 >fastaqtl_gene_format.log 2>fastaqtl_gene_format.err &
+#cd ~/aQTL_pipeline
+#python ~/aQTL_pipeline/bin/aQTL_format_PAINTOR_hg38.py -c ~/aQTL_pipeline/Whole_Blood.cis_eqtl_all_approachb.txt.gz -i ~/TWAS/input/data/gtex_v8_eur_filtered_maf0.01_monoallelic_variants.txt.gz -o ~/aQTL_pipeline/20210718_aQTLs_postionTohg38 >fastaqtl_gene_format.log 2>fastaqtl_gene_format.err &
 
 #Author : Yueming Hu
 #TIME:2021/7/07
@@ -114,7 +114,7 @@ def main(args):
 	output=outputfile+"/"+name+ '.cis_aqtl_hg38.txt'
 	if not os.path.exists(output): #判断文件是否存在
 		temname = name+".cis_aqtl_hg19.txt"
-		vcfaQTL = gzip.open("/lustre/home/ymhu/aQTL_pipeline/output_filter/"+name+"_SNPs.vcf_genotype.vcf.gz",'rt', encoding='utf-8')
+		vcfaQTL = gzip.open("~/aQTL_pipeline/output_filter/"+name+"_SNPs.vcf_genotype.vcf.gz",'rt', encoding='utf-8')
 		first_line = vcfaQTL.readline()  # 取第一行
 		vcfaQTL.close()
 		N = len(first_line.split('\t'))-1

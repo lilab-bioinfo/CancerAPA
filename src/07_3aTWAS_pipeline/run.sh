@@ -220,7 +220,7 @@ for file in `ls $WORK_DIR/GWASs/*.sumstats`
         do
         Rscript $fusion/bin/fusion_twas-master/FUSION.post_process.R --sumstats ${file} \
         --input $WORK_DIR/resulsts/${GWAS}/${tissueName}/${GWAS}.${tissueName}.chr${CHR}.top \
-        --out /lustre/home/hchen/2021-10-31-cancer-GWAS/aTWAS/fusion/results/${GWAS}/${tissueName}/${GWAS}.${tissueName}.chr${CHR}.top.analysis \
+        --out ~/2021-10-31-cancer-GWAS/aTWAS/fusion/results/${GWAS}/${tissueName}/${GWAS}.${tissueName}.chr${CHR}.top.analysis \
         --ref_ld_chr $fusion/bin/fusion_twas-master/LDREF/1000G.EUR \
         --chr $CHR \
         --plot \

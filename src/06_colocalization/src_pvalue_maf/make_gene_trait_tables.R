@@ -90,7 +90,7 @@ trait_table_PVs<-subset(trait_table_PVs,MAF<0.99 & MAF>0.01)
 #print(trait_table_PVs[1:3,])
 
 # Import the microArray alignment table associated with the eQTL
-microArray_alnTable_file <- "/lustre/home/hchen/2021-10-31-cancer-GWAS/aQTL_coloc/output/microArray/final/allTissue_hg19_microArray.txt"    #edit by Lei: change path
+microArray_alnTable_file <- "~/2021-10-31-cancer-GWAS/aQTL_coloc/output/microArray/final/allTissue_hg19_microArray.txt"    #edit by Lei: change path
 microArray_alnTable<-get_microArray_table(microArray_alnTable_file)
 #print (microArray_alnTable)
 

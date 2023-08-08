@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-#python3 /lustre/home/ymhu/aQTL_pipeline/bin/GTEx_V8_filter_VCF_Genetype2value.py -p /lustre/home/ymhu/aQTL_pipeline/output/Whole_Blood_SNPs.vcf_genotype.vcf -o /lustre/home/ymhu/aQTL_pipeline/output_filter/Whole_Blood_SNPs.vcf_genotype.vcf >GTEx_V8_filter_SNPs.log 2>GTEx_V8_filter_SNPs.err &
+#python3 ~/aQTL_pipeline/bin/GTEx_V8_filter_VCF_Genetype2value.py -p ~/aQTL_pipeline/output/Whole_Blood_SNPs.vcf_genotype.vcf -o ~/aQTL_pipeline/output_filter/Whole_Blood_SNPs.vcf_genotype.vcf >GTEx_V8_filter_SNPs.log 2>GTEx_V8_filter_SNPs.err &
 
 #Author : Yueming Hu
 #TIME:2021/04/12

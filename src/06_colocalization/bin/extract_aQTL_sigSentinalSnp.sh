@@ -12,7 +12,7 @@ cat $PBS_NODEFILE > /tmp/nodefile.$$
 echo "process will start at : "
 date
 echo "++++++++++++++++++++++++++++++++++++++++"
-cd /lustre/home/ymhu/aQTL_coloc/bin
+cd ~/aQTL_coloc/bin
 
 module load R/3.6.2-anaconda3
 

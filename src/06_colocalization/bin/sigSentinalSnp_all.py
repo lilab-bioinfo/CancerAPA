@@ -85,7 +85,7 @@ for each_trait in file_trait:
 				hyp4=float(line_split[6])
 				#if hyp4>0.75:
 				#if hyp4>0.75:#by HYM
-				if hyp4>0.75 and hyp4/(hyp3+hyp4)>=0.9: #by hchen
+				if hyp4>0.75 and hyp4/(hyp3+hyp4)>=0.9: 
 					geneName=line_split[0].split('_')[0]
 					if geneName != "summary" and geneName != "me" and geneName in geneChrDic:
 						geneChr=geneChrDic[geneName]

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-#cd /lustre/home/ymhu/aQTL_pipeline
-#python /lustre/home/ymhu/aQTL_pipeline/bin/aQTL_format_PAINTOR.py -c /lustre/home/ymhu/aQTL_pipeline/Whole_Blood.cis_eqtl_all_approachb.txt.gz -i /lustre/home/ymhu/TWAS/input/data/gtex_v8_eur_filtered_maf0.01_monoallelic_variants.txt.gz -o /lustre/home/ymhu/aQTL_pipeline >fastaqtl_gene_format.log 2>fastaqtl_gene_format.err &
+#cd ~/aQTL_pipeline
+#python ~/aQTL_pipeline/bin/aQTL_format_PAINTOR.py -c ~/aQTL_pipeline/Whole_Blood.cis_eqtl_all_approachb.txt.gz -i ~/TWAS/input/data/gtex_v8_eur_filtered_maf0.01_monoallelic_variants.txt.gz -o ~/aQTL_pipeline >fastaqtl_gene_format.log 2>fastaqtl_gene_format.err &
 
 #Author : Yueming Hu
 #TIME:2021/7/07
@@ -119,12 +119,12 @@ def main(args):
 #		bedname = name+".bed"
 #		temname = name+"_temp.txt"
 #		unlifted = bedname+".unmap"
-#		vcfaQTL = gzip.open("/lustre/home/ymhu/aQTL_pipeline/output_filter/"+name+"_SNPs.vcf_genotype.vcf.gz",'rt', encoding='utf-8')
+#		vcfaQTL = gzip.open("~/aQTL_pipeline/output_filter/"+name+"_SNPs.vcf_genotype.vcf.gz",'rt', encoding='utf-8')
 #		first_line = vcfaQTL.readline()  # 取第一行
 #		vcfaQTL.close()
 #		N = len(first_line.split('\t'))-1
 #		open_gz(pathfile,temname,reference_dict)
-#		print_run("CrossMap.py bed /lustre/home/ymhu/fastENLOC/input/hg38ToHg19.over.chain.gz "+ " " + temname + " "+ bedname)			
+#		print_run("CrossMap.py bed ~/fastENLOC/input/hg38ToHg19.over.chain.gz "+ " " + temname + " "+ bedname)			
 #		w = open(output,"w")
 #		w.write("gene\tchr\tposition\trsid\tpval_nominal\tbeta\tvarbeta\tN\tMAF\n")
 #		liftOverfile = open(bedname)

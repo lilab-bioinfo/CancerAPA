@@ -12,7 +12,7 @@ system(paste("echo",R_ver))
 system("echo ===========================")
 
 # Choose a path to load R packages from:
-lp <- "/lustre/home/hchen/R/x86_64-conda_cos6-linux-gnu-library/3.6"
+lp <- "~/R/x86_64-conda_cos6-linux-gnu-library/3.6"
 
 # Add your library path to the current session of R's library path variable
 .libPaths(lp)

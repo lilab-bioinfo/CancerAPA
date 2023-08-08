@@ -11,14 +11,14 @@ usage <- function() {
     tissue       tissue
 ')
 }
-lp <- "/lustre/home/ymhu/R/x86_64-conda_cos6-linux-gnu-library/3.6"
+lp <- "~/R/x86_64-conda_cos6-linux-gnu-library/3.6"
 .libPaths(lp)
 # Draw a histogram from a text file
 args <- commandArgs(trailingOnly=TRUE)
 CIS_DISTANCE <- 1e6
 TISSUE <- args[1]
 #TISSUE <- 'GTEx_EBV_transformed'
-DIR <- '/lustre/home/ymhu/aQTL_pipeline'
+DIR <- '~/aQTL_pipeline'
 OUT_PREFIX <- TISSUE
 
 # Check input args

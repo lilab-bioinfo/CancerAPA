@@ -65,7 +65,7 @@ def main(args):
 			unlifted = bedname+".unmap"
 			open_gz(path_eqtl+"/"+file,temname)
 			#print_run("liftOver " + "tempfile.txt" + " " +  "/home/yueming/software/hg38ToHg19.over.chain.gz" + " " + "output.bed" + " " + unlifted)
-			print_run("CrossMap.py bed /lustre/home/ymhu/sQTL/input/hg38ToHg19.over.chain.gz "+ " " + temname + " "+ bedname)	
+			print_run("CrossMap.py bed ~/sQTL/input/hg38ToHg19.over.chain.gz "+ " " + temname + " "+ bedname)	
 			print_run("rm " + " "  + temname)
 			print_run("mv " + " " + unlifted+ " " + "unmapeQTLs")
 			print_run("mv " + " " + bedname+ " " + "bedQTLs")

@@ -1,4 +1,4 @@
-lp <- "/lustre/home/hchen/R/x86_64-conda_cos6-linux-gnu-library/3.6"
+lp <- "~/R/x86_64-conda_cos6-linux-gnu-library/3.6"
 .libPaths(lp)
 
 suppressMessages(library('plink2R'))

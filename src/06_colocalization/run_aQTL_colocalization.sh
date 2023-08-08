@@ -311,13 +311,13 @@ rm -rf /tmp/nodes.$$/
 					wait
 					fi
 				fi
-		process=`qstat -u hchen|wc -l`
+		process=`qstat -u |wc -l`
 		while (( process >= 300))
 		do
 			echo "Current number of jobs is larger than 300"
 			echo "Wait another 10 minutes"
 			sleep 10m
-			process=`qstat -u hchen|wc -l`
+			process=`qstat -u |wc -l`
 		done
 		if [ $var -lt 1 ]
 		then

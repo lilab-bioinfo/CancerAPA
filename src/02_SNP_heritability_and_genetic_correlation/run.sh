@@ -116,7 +116,7 @@ module load R/3.6.2-anaconda3
 source '$CUR_DIR'/.bashrc
 source activate '$CUR_DIR'/.conda/envs/ldsc
 
-/lustre/home/ymhu/software/ldsc/ldsc.py --chisq-max 80 --invert-anyway --return-silly-things --h2 '$GWASfile' --ref-ld-chr /lustre/home/ymhu/software/ldsc/eur_w_ld_chr/ --w-ld-chr /lustre/home/ymhu/software/ldsc/weights_hm3_no_hla/weights. --out /lustre/home/ymhu/software/ldsc/result/20210729_ldsc_heritability/'$CGID'
+~/software/ldsc/ldsc.py --chisq-max 80 --invert-anyway --return-silly-things --h2 '$GWASfile' --ref-ld-chr ~/software/ldsc/eur_w_ld_chr/ --w-ld-chr ~/software/ldsc/weights_hm3_no_hla/weights. --out ~/software/ldsc/result/20210729_ldsc_heritability/'$CGID'
 
 wait
 echo "processs will sleep 30s"

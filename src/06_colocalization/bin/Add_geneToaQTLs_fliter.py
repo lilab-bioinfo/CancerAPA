@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-#python /lustre/home/ymhu/aQTL_coloc/bin/Add_geneToaQTLs_fliter.py -b /lustre/home/ymhu/aQTL_coloc/bin/hg38_Refseq_id_from_UCSC.txt -p /lustre/home/ymhu/aQTL_coloc/input/20210718_aQTLs_postionTohg19_for_wenyan -o /lustre/home/ymhu/aQTL_coloc/input/20210728_aQTLs_postionTohg19_for_coloc 
+#python ~/aQTL_coloc/bin/Add_geneToaQTLs_fliter.py -b ~/aQTL_coloc/bin/hg38_Refseq_id_from_UCSC.txt -p ~/aQTL_coloc/input/20210718_aQTLs_postionTohg19_for_wenyan -o ~/aQTL_coloc/input/20210728_aQTLs_postionTohg19_for_coloc 
 
 #Author : Yueming Hu
 #TIME:2020/12/03

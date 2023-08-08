@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-#python /lustre/home/ymhu/sQTL/bin/fliter_sQTLs_postionTohg19.py -p /lustre/home/ymhu/sQTL/output/tempdata/sQTLs_rsid_new
+#python ~/sQTL/bin/fliter_sQTLs_postionTohg19.py -p ~/sQTL/output/tempdata/sQTLs_rsid_new
 
 
 #python CrossMap.py bed Whole_Blood_rsid.txt
@@ -64,7 +64,7 @@ def main(args):
 			unlifted = bedname+".unmap"
 			open_gz(path_eqtl+"/"+file,temname)
 			#print_run("liftOver " + "tempfile.txt" + " " +  "/home/yueming/software/hg38ToHg19.over.chain.gz" + " " + "output.bed" + " " + unlifted)
-			print_run("CrossMap.py bed /lustre/home/ymhu/sQTL/input/hg38ToHg19.over.chain.gz "+ " " + temname + " "+ bedname)			
+			print_run("CrossMap.py bed ~/sQTL/input/hg38ToHg19.over.chain.gz "+ " " + temname + " "+ bedname)			
 			liftOverfile = open(bedname)
 			w = open(path_eqtl+"/../sQTLs_intron_positionTohg19/"+file,"w")
 			w.write("chr"+"\t"+"position"+"\t"+"intron"+"\t"+"p-value"+"\t"+"N"+"\t"+"rsid"+"\n")

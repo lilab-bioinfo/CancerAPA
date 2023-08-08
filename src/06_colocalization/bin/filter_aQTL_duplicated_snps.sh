@@ -14,13 +14,13 @@ echo "process will start at : "
 date
 echo "++++++++++++++++++++++++++++++++++++++++"
 module load R/3.6.2-anaconda3
-for file in /lustre/home/ymhu/aQTL_coloc/output/aQTLs_20210728/*
+for file in ~/aQTL_coloc/output/aQTLs_20210728/*
 do
 tissueName=`echo "$file" |awk -F"/" '{print $NF;exit}'`
-for gene in /lustre/home/ymhu/aQTL_coloc/output/aQTLs_20210728/"$tissueName"/*.txt
+for gene in ~/aQTL_coloc/output/aQTLs_20210728/"$tissueName"/*.txt
 do
 geneName=`echo "$gene" |awk -F"/" '{print $NF;exit}'`
-python /lustre/home/ymhu/sQTL/bin/filter_QTL_duplicated_snps.py -i /lustre/home/ymhu/aQTL_coloc/output/aQTLs_20210728/"$tissueName"/"$geneName" -o /lustre/home/ymhu/aQTL_coloc/output/aQTLs_20210728/"$tissueName"/"$geneName"
+python ~/sQTL/bin/filter_QTL_duplicated_snps.py -i ~/aQTL_coloc/output/aQTLs_20210728/"$tissueName"/"$geneName" -o ~/aQTL_coloc/output/aQTLs_20210728/"$tissueName"/"$geneName"
 done
 echo $tissueName" is finished"
 done
